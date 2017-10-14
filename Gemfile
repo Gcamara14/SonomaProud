@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Added gems 10/13/2017
 
+gem "paperclip", "~> 5.0.0"
 
 
 
