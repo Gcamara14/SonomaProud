@@ -10,31 +10,32 @@ Why am I making this?
 
 ## To Do List
 
-<form><input type="checkbox" name="vehicle" value="Bike" checked=""> Setup the website in git  
-<input type="checkbox" name="vehicle" value="Bike">Get an excell list of all the businesses that have helped donate  
-<input type="checkbox" name="vehicle" value="Bike">Develop The DB design  
-<input type="checkbox" name="vehicle" value="Bike">Develop the UI for the website  
-<input type="checkbox" name="vehicle" value="Bike">Begin working on the backend  
-<input type="checkbox" name="vehicle" value="Bike">add gems / dependancies  
-<input type="checkbox" name="vehicle" value="Bike">add user authentication  
-<input type="checkbox" name="vehicle" value="Bike">scaffold the business listings  
-<input type="checkbox" name="vehicle" value="Bike"> Connect the website to aws S3 servers for image uploading  
-<input type="checkbox" name="vehicle" value="Bike">add 404 pages  
-<input type="checkbox" name="vehicle" value="Bike">Push to heroku  
-<input type="checkbox" name="vehicle" value="Bike">Find other webmasters and set them up as users for data entry process.  
-</form>
+- [x] Setup the website in git  
+- [ ] Get an excell list of all the businesses that have helped donate  
+- [ ] Develop The DB design  
+- [ ] Develop the UI for the website  
+- [ ] Begin working on the backend  
+- [ ] add gems / dependancies  
+- [ ] add user authentication  
+- [ ] scaffold the business listings  
+- [ ]  Connect the website to aws S3 servers for image uploading  
+- [ ] add 404 pages  
+- [ ] Push to heroku  
+- [ ] Find other webmasters and set them up as users for data entry process.  
+
 
 ## Features
 
-<form><input type="checkbox" name="vehicle" value="Bike">User Authentication  
-<input type="checkbox" name="vehicle" value="Bike">Business schema  
-<input type="checkbox" name="vehicle" value="Bike">Image Uploading  
-<input type="checkbox" name="vehicle" value="Bike">Website Accessibility  
-<input type="checkbox" name="vehicle" value="Bike">Image Optimization  
-<input type="checkbox" name="vehicle" value="Bike">SEO Friendly  
-<input type="checkbox" name="vehicle" value="Bike">Add businesses who have been remarkable and link their social media  
-<input type="checkbox" name="vehicle" value="Bike">Add user stories of people who have been remarkable  
-</form>
+
+- [ ] User Authentication  
+- [ ] Business schema  
+- [ ] Image Uploading  
+- [ ] Website Accessibility  
+- [ ] Image Optimization  
+- [ ] SEO Friendly  
+- [ ] Add businesses who have been remarkable and link their social media  
+- [ ] Add user stories of people who have been remarkable  
+
 
 ## How to support
 
