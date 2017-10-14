@@ -12,7 +12,7 @@ Why am I making this?
 
 - [x] Setup the website in git  
 - [ ] Get an excell list of all the businesses that have helped donate  
-- [ ] Develop The DB design  
+- [x] Develop The DB design  
 - [ ] Develop the UI for the website  
 - [ ] Begin working on the backend  
 - [ ] add gems / dependancies  
