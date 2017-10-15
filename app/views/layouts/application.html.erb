@@ -50,11 +50,12 @@
                         <button class="ma-nav-list__item__btn">Sign up</button>
                     </li>
                     <li>
-                        <a class="ma-nav-list__item__btn link-reset" href="">
+                    <%= link_to edit_user_registration_path, :class => "ma-nav-list__item__btn link-reset"  do %>
+                        
                             <div class="content">
                                 <div class="ma-avatar ma-avatar--tiny ma-avatar--border-minimal round"><img alt="" height="32" src="https://pbs.twimg.com/profile_images/888407217040498689/rp8G6S4N_400x400.jpg" width="32"></div>
                             </div>
-                        </a>
+                        <% end %>
                     </li>
                 </ul>
             </nav>
