@@ -1,4 +1,117 @@
-<p id="notice"><%= notice %></p>
+
+
+<h1 class="space-top-3 container">Supported Sonoma County Businesses</h1>
+
+<p class=" container space-7 space-top-5 ma-p ma-p--default"> The following businesses below deserve our love. Please try your best to like them on their social media. It goes a long way in terms of PR & the success of their business ❤️  <small><i class="fa fa-hashtag" aria-hidden="true"></i></small>SonomaProud <small><i class="fa fa-hashtag" aria-hidden="true"></i></small>AlwaysLove</p>
+
+<div class="container">
+<div class="row display-flex">
+  <% @businesses.each_slice(3)  do |businesses| %>
+    
+    <% businesses.each  do |business| %>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="inner-col space-3 space-top-3">
+          <img src="<%= business.image %>" class="img-responsive" alt="image of <%=business.name %>">
+          <h2><strong><%= business.name %></strong><small> <i class="fa fa-check-circle verified-hex" aria-hidden="true"></i></small></h2>
+          <h6><%= business.created_at.strftime('%b %d, %Y') %></h6>
+          <p class="ma-p ma-p--small"> <%= raw(business.description).truncate(358) %> <%= link_to "read more", business %></p>
+          <div class="social-media social-links social-media social-links ma-p ma-p--small space-4 space-top-4">
+            <% unless business.facebook.blank? %>
+              <a href="<%= business.facebook %>" class="ma-link--simple--minimal" target="_blank">
+                <i class="fa fa-facebook fa-4" aria-hidden="true"></i>
+                </a>
+            <%end %>
+            <% unless business.google.blank? %>
+              <a href="<%= business.google %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-google-plus fa-4" aria-hidden="true"></i>
+              </a>
+            <% end %>            
+            <% unless business.yelp.blank? %>
+              <a href="<%= business.yelp %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-yelp fa-4" aria-hidden="true"></i>
+              </a>
+            <% end %>
+            <% unless business.instagram.blank? %>
+              <a href="<%= business.instagram %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-instagram fa-4" aria-hidden="true"></i>
+                </a>
+            <% end %>
+            <% unless business.twitter.blank? %>
+              <a href="<%= business.twitter %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-twitter fa-4" aria-hidden="true"></i>
+                </a>
+            <% end %>
+          </div>
+          <%= link_to "Get More Info", business, class: "ma-btn ma-btn--small ma-btn--minimal ma-btn--block space-1" %> 
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>
+
+
+<!-- 
+<section class="examples-section space-10">
+            <h2>Examples</h2>
+            <div class="row">
+                <div class="col-xs-4">
+                    <h3>Check In component</h3>
+                    <div class="ma-box">
+                        <div class="ma-box__content">
+                            <form class="ma-form ma-form--basic">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group margin-reset">
+                                            <label>Check In</label> <input class="ma-input ma-input--default" placeholder="dd/mm/yyyy" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group margin-reset">
+                                            <label>Check Out</label> <input class="ma-input ma-input--default" placeholder="dd/mm/yyyy" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>Guests</label>
+                                            <div class="ma-select-container ma-select-container--default ma-select-container--block">
+                                                <select class="ma-input ma-select ma-select--default ma-select--block">
+                                                    <option disabled="" selected="" value="">
+                                                        1 guest
+                                                    </option>
+                                                    <option value="Male">
+                                                        2 guests
+                                                    </option>
+                                                    <option value="Female">
+                                                        3 guests
+                                                    </option>
+                                                    <option value="Other">
+                                                        4+ guests
+                                                    </option>
+                                                </select> <span class="ma-select-arrow"><i class="ma-select-arrow__icon" data-feather="chevron-down"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="col-xs-12">
+                                        <button class="ma-btn ma-btn--default ma-btn--primary ma-btn--block space-1">Request to Book</button>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="ma-label ma-label--simple ma-label--simple--small">
+                                            100% refundable · You won’t be <a class="ma-link ma-link--simple ma-link--simple--secondary" href="">charged yet</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-8"></div>
+            </div>
+        </section>
 
 <h1>Businesses</h1>
 
@@ -53,4 +166,4 @@
 <% if user_signed_in? %>
 <%= link_to 'New Business', new_business_path %>
 
-<% end %>
+<% end %> -->

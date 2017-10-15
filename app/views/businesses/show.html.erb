@@ -16,6 +16,33 @@
 <% unless @business.location.blank? %><p class="ma-p ma-p--default"><strong>Location:</strong> <%= @business.location %></p> <% end %>
 <% unless @business.phone.blank? %><p class="ma-p ma-p--default"><strong>Phone:</strong> <%= @business.phone %></p> <% end %>
 <% unless @business.website.blank? %><p class="ma-p ma-p--default"><strong>Website:</strong> <%= @business.website %></p> <% end %>
+<div class="social-media social-links social-media social-links ma-p ma-p--small space-4 space-top-4">
+            <% unless @business.facebook.blank? %>
+              <a href="<%= @business.facebook %>" class="ma-link--simple--minimal" target="_blank">
+                <i class="fa fa-facebook fa-4" aria-hidden="true"></i>
+                </a>
+            <%end %>
+            <% unless @business.google.blank? %>
+              <a href="<%= @business.google %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-google-plus fa-4" aria-hidden="true"></i>
+                </a>
+            <% end %>            
+            <% unless @business.yelp.blank? %>
+              <a href="<%= @business.yelp %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-yelp fa-4" aria-hidden="true"></i>
+              </a>
+            <% end %>
+            <% unless @business.instagram.blank? %>
+              <a href="<%= @business.instagram %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-instagram fa-4" aria-hidden="true"></i>
+                </a>
+            <% end %>
+            <% unless @business.twitter.blank? %>
+              <a href="<%= @business.twitter %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-twitter fa-4" aria-hidden="true"></i>
+                </a>
+            <% end %>
+          </div>
 <% if user_signed_in? %>
 <p class="well"><strong>= = = CUSTOM HTML Below = = = <small>This message is only visible to logged in users</small></p>
 <% end %>
@@ -24,6 +51,8 @@
 <%= @business.html.html_safe  %>
 </div>
 
+
+<h2 class="text-center space-5 space-top-5">Find them online!</h2>
 
 <div class="row">
 <div class="col-sm-4 space-2 text-center">
