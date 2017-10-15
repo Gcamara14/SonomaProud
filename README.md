@@ -14,11 +14,11 @@ Why am I making this?
 - [ ] Get an excell list of all the businesses that have helped donate  
 - [x] Develop The DB design  
 - [ ] Develop the UI for the website  
-- [ ] Begin working on the backend  
-- [ ] add gems / dependancies  
-- [ ] add user authentication  
-- [ ] scaffold the business listings  
-- [ ]  Connect the website to aws S3 servers for image uploading  
+- [x] Begin working on the backend  
+- [x] add gems / dependancies  
+- [x] add user authentication  
+- [x] scaffold the business listings  
+- [ ] Connect the website to aws S3 servers for image uploading  
 - [ ] add 404 pages  
 - [ ] Push to heroku  
 - [ ] Find other webmasters and set them up as users for data entry process.  
@@ -27,12 +27,12 @@ Why am I making this?
 ## Features
 
 
-- [ ] User Authentication  
+- [x] User Authentication  
 - [ ] Business schema  
 - [ ] Image Uploading  
 - [ ] Website Accessibility  
 - [ ] Image Optimization  
-- [ ] SEO Friendly  
+- [x] SEO Friendly  
 - [ ] Add businesses who have been remarkable and link their social media  
 - [ ] Add user stories of people who have been remarkable  
 
