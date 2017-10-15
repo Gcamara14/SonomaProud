@@ -12,6 +12,8 @@ class WelcomeController < ApplicationController
   end
 
   def feedback
-  	
+  end
+
+  def why
   end
 end

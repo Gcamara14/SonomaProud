@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'welcome/contact'
 
   get 'welcome/feedback'
+  get 'welcome/why'
 
 
   root to: 'welcome#index'

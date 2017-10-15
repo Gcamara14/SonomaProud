@@ -100,7 +100,7 @@
         <nav class="container">
             <div class="ma-subnav__item space-right-4">
                 <div class="content">
-                    <a class="link-reset" href="">Why</a>
+                    <%= link_to "Why", welcome_why_path, class: "link-reset" %>
                 </div>
             </div>
             <div class="ma-subnav__item space-right-4">
@@ -115,7 +115,7 @@
             </div>
             <div class="ma-subnav__item">
                 <div class="content">                    
-                    <%= link_to "Feedback", welcome_feedback_path, class: "link-reset" %>
+                    <%= link_to "Contact Us", welcome_feedback_path, class: "link-reset" %>
                 </div>
             </div>
         </nav>
