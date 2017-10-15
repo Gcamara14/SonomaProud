@@ -1,3 +1,5 @@
+
+
 <%= form_with(model: business, local: true, html: { multipart: true }) do |form| %>
   <% if business.errors.any? %>
     <div id="error_explanation">
@@ -11,67 +13,97 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image, id: :business_image %>
-  </div>
+<section class="forms-section container">
+            <h2>Enter the Business information</h2>
+            <div class="row">
+                <div class="col-xs-12 space-5">
+                    <div class="ma-box">
+                        <div class="ma-box__title">
+                            Please try your best not to leave any info out.
+                        </div>
+                        <div class="ma-box__content">
+                            <form class="ma-form ma-form--basic">
+                                <h3>Text Inputs</h3><!-- Small Input Text -->
+                                <div class="field form-group">
+                                  <%= form.label :name, 'Business Name'%>
+                                  <%= form.text_field :name, id: :business_name, class: "ma-input ma-input--default", id: "input1", placeholder: "Name", type: "text" %>
+                                </div><!-- Default Input Text -->
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :business_name %>
-  </div>
+                                <div class="field form-group">
+                                  <%= form.label :description %>
+                                  <%= form.text_area :description, id: :business_description, class: "ma-input ma-input--default ma-textarea", id: "input2", placeholder: "Enter a description of who they are, what they did?", type: "text", cols: "40", rows: "5"%>
+                                </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :business_description %>
-  </div>
+                                <div class="field form-group">
+                                  <%= form.label :location %>
+                                  <%= form.text_field :location, id: :business_location, class: "ma-input ma-input--default", id: "input3", placeholder: "Business Full Address", type: "text"%>
+                                </div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location, id: :business_location %>
-  </div>
+                                <div class="field form-group">
+                                  <%= form.label :phone %>
+                                  <%= form.text_field :phone, id: :business_phone, class: "ma-input ma-input--default", id: "input4", placeholder: "555-555-5555", type: "text"%>
+                                </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, id: :business_phone %>
-  </div>
+                                <div class="field form-group">
+                                  <%= form.label :facebook %>
+                                  <%= form.text_field :facebook, id: :business_facebook, class: "ma-input ma-input--default", id: "input5", placeholder: "Facebook URL", type: "text"%>
+                                </div>
 
-  <div class="field">
-    <%= form.label :facebook %>
-    <%= form.text_field :facebook, id: :business_facebook %>
-  </div>
+                                <div class="field form-group">
+                                  <%= form.label :google %>
+                                  <%= form.text_field :google, id: :business_google, class: "ma-input ma-input--default", id: "input6", placeholder: "Google Page / Review Url (see gio for help if needed)", type: "text"%>
+                                </div>
 
-  <div class="field">
-    <%= form.label :google %>
-    <%= form.text_field :google, id: :business_google %>
-  </div>
+                                <div class="field form-group">
+                                  <%= form.label :yelp %>
+                                  <%= form.text_field :yelp, id: :business_yelp, class: "ma-input ma-input--default", id: "input7", placeholder: "Yelp url", type: "text"%>
+                                </div>
 
-  <div class="field">
-    <%= form.label :yelp %>
-    <%= form.text_field :yelp, id: :business_yelp %>
-  </div>
+                                <div class="field form-group">
+                                  <%= form.label :instagram %>
+                                  <%= form.text_field :instagram, id: :business_instagram, class: "ma-input ma-input--default", id: "input8", placeholder: "Instagram URL", type: "text"%>
+                                </div>
 
-  <div class="field">
-    <%= form.label :instagram %>
-    <%= form.text_field :instagram, id: :business_instagram %>
-  </div>
+                                <div class="field form-group">
+                                  <%= form.label :twitter %>
+                                  <%= form.text_field :twitter, id: :business_twitter, class: "ma-input ma-input--default", id: "input9", placeholder: "Twitter Url", type: "text"%>
+                                </div>
 
-  <div class="field">
-    <%= form.label :twitter %>
-    <%= form.text_field :twitter, id: :business_twitter %>
-  </div>
+                                <div class="field form-group">
+                                  <%= form.label :website %>
+                                  <%= form.text_field :website, id: :business_website, class: "ma-input ma-input--default", id: "input10", placeholder: "Website URL", type: "text"%>
+                                </div>
 
-  <div class="field">
-    <%= form.label :website %>
-    <%= form.text_field :website, id: :business_website %>
-  </div>
 
-  <div class="field">
-    <%= form.label :html %>
-    <%= form.text_area :html, id: :business_html %>
-  </div>
+                                <div class="field form-group">
+                                  <%= form.label :image, "Upload an image of the business or the logo" %>
+                                  <%= form.file_field :image, id: :business_image, class: "ma-btn ma-btn--small ma-btn--secondary-without-bg" %>
+                                </div>
+
+                                <div class="field form-group">
+                                  <%= form.label :html, "Custom HTML" %>
+                                  <%= form.text_area :html, id: :business_html, class: "ma-input ma-input--default ma-textarea", cols: "60", rows: "6", id: "input11", placeholder: "Input custom HTML such as more content using a <h2> tag and <p> tags. Or add a google map, etc. Or leave this blank", type: "text"%>
+                                </div>
+
+                                 <div class="actions">
+                                    <%= form.submit class: 'ma-btn ma-btn--default ma-btn--primary' %>
+                                  </div>
+                               <% end %>
+                            </form>
+                        </div>
+                        <div class="ma-box__footer"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
   
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+  
+ 
+

@@ -862,9 +862,13 @@ body.mainApp {
   .ma-input--large {
     padding: 13px;
     font-size: 18px; }
-  .ma-input--invalid {
+  .ma-input--invalid, .ma-input--alert {
     background-color: #fff2ef;
     border-color: #d93900; }
+  .ma-input--notice {
+    background-color: #86c2c3;
+    border-color: #5dcfd4;
+    color: #fff; }
 
 .ma-input[disabled] {
   opacity: 0.5;
