@@ -1,2 +1,620 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+    <section id="section-banner_1" aria-label="Website Banner featuring a search bar">
+        <div class="section-banner_wrapper">
+            <div class="section-banner-background_img">
+                <div class="section-banner_content container titles-section">
+                    <p class="section-banner_h1 h1"><strong>Dental Implants Online</strong></h1>
+                        <p class="section-banner_h2 h2">Your Guide to Dental Implant Surgeons</p>
+                        <p class="section-banner_tagline h3">Dental Implants Online is an Internet resource to educate you about the placement of dental implants and to help you locate a dental implant practice in your area.</p>
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="form-group">
+                                    <label for="banner-address">Address</label>
+                                    <input class="ma-input ma-input--large" id="banner-address" placeholder="Address" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label for="banner-city">City</label>
+                                    <input class="ma-input ma-input--large" id="banner-city" placeholder="City" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label for="banner-state">State</label>
+                                    <input class="ma-input ma-input--large" id="banner-state" placeholder="State" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 space-5">
+                                <button class="ma-btn ma-btn--default ma-btn--primary">Start now</button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="landingPage__progress-block space-top-11 space-11 container" aria-label="Top Oral Surgeons in Major Places">
+        <div class="row center-xs space-5">
+            <div class="hidden-xs col-sm-2 col-md-2 col-lg-2"></div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 text-center space-top-5">
+                <h2 class="margin-reset">Incredible Dentistry</h2>
+                <p class="ma-p ma-p--large">Top oral surgeons for patients who want to learn more about dental implants</p>
+            </div>
+            <div class="hidden-xs col-sm-2 col-md-2 col-lg-2"></div>
+        </div>
+        <div class="row center-xs">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5">
+                        <!-- Country Box -->
+                        <a class="link-reset" href="#">
+                            <div id="landingPage-country-box-CR" class="country-progress-block
+                                        country-progress-block--first text-left">
+                                <h2 class="country-progress-block__text margin-reset space-3">Costa Rica</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5">
+                        <!-- Country Box -->
+                        <a class="link-reset" href="#">
+                            <div id="landingPage-country-box-BR" class="country-progress-block
+                                        country-progress-block--first text-left">
+                                <h2 class="country-progress-block__text margin-reset space-3">Brazil</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5">
+                        <!-- Country Box -->
+                        <a class="link-reset" href="#">
+                            <div id="landingPage-country-box-VE" class="country-progress-block
+                                        country-progress-block--first text-left">
+                                <h2 class="country-progress-block__text margin-reset space-3">Venezuela</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5">
+                        <!-- Country Box -->
+                        <a class="link-reset" href="/page/country/chile">
+                            <div id="landingPage-country-box-CL" class="country-progress-block
+                                        country-progress-block--first text-left">
+                                <h2 class="country-progress-block__text margin-reset space-3">Chile</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5">
+                        <!-- Country Box -->
+                        <a class="link-reset" href="/page/country/peru">
+                            <div id="landingPage-country-box-PE" class="country-progress-block
+                                        country-progress-block--first text-left">
+                                <h2 class="country-progress-block__text margin-reset space-3">Peru</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5">
+                        <!-- Country Box -->
+                        <a class="link-reset" href="#">
+                            <div id="landingPage-country-box-AR" class="country-progress-block
+                                        country-progress-block--first text-left">
+                                <h2 class="country-progress-block__text margin-reset space-3">Argentina</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5" ng-repeat="country in ::vm._countryContainers track by $index">
+                        <!-- Country Box -->
+                        <a ng-href="/page/country/ecuador" class="link-reset" ng-click="vm.goToCountryDetails(country.aliasCountry);$event.preventDefault()" href="/page/country/ecuador">
+                            <div id="landingPage-country-box-EC" class="country-progress-block
+                                        country-progress-block--first text-left">
+                                <h2 class="country-progress-block__text margin-reset space-3">Ecuador</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5" ng-repeat="country in ::vm._countryContainers track by $index">
+                        <!-- Country Box -->
+                        <a ng-href="/page/country/bolivia" class="link-reset" ng-click="vm.goToCountryDetails(country.aliasCountry);$event.preventDefault()" href="/page/country/bolivia">
+                            <div id="landingPage-country-box-BO" class="country-progress-block
+                                        country-progress-block--first text-left">
+                                <h2 class="country-progress-block__text margin-reset space-3">Bolivia</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5" ng-repeat="country in ::vm._countryContainers track by $index">
+                        <!-- Country Box -->
+                        <a ng-href="/page/country/mexico" class="link-reset" ng-click="vm.goToCountryDetails(country.aliasCountry);$event.preventDefault()" href="/page/country/mexico">
+                            <div id="landingPage-country-box-MX" class="country-progress-block
+                                        country-progress-block--first text-left">
+                                <h2 class="country-progress-block__text margin-reset space-3">Mexico</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5" ng-repeat="country in ::vm._countryContainers track by $index">
+                        <!-- Country Box -->
+                        <a ng-href="/page/country/guatemala" class="link-reset" ng-click="vm.goToCountryDetails(country.aliasCountry);$event.preventDefault()" href="/page/country/guatemala">
+                            <div id="landingPage-country-box-GT" class="country-progress-block
+                                        country-progress-block--first text-left">
+                                <h2 class="country-progress-block__text margin-reset space-3">Guatemala</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5" ng-repeat="country in ::vm._countryContainers track by $index">
+                        <!-- Country Box -->
+                        <a ng-href="/page/country/colombia" class="link-reset" ng-click="vm.goToCountryDetails(country.aliasCountry);$event.preventDefault()" href="/page/country/colombia">
+                            <div id="landingPage-country-box-CO" class="country-progress-block
+                                        country-progress-block--first text-left">
+                                <h2 class="country-progress-block__text margin-reset space-3">Colombia</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of landing page section -->
+    <!-- PG Break -->
+    <div class="ma-separator-dashed-image space-12 container"></div>
+    <!-- PG Break -->
+    <main class="container">
+        <h1>Dental Implants Online:<br>
+    Your Guide to Dental Implant Surgeons</h1>
+        <p class="ma-p ma-p--default">Dental Implants Online is an Internet resource to educate you about the placement of dental implants and to help you locate a dental implant practice in your area.</p>
+        <div class="row">
+            <div class="col-sm-12 index-content">
+                <div class="row">
+                <div class="col-sm-8">
+                <h2 id="search">Searching for an Implant Dentist</h2>
+                <p class="ma-p ma-p--default">Finding a doctor who handles dental implants in your area is as simple as choosing your location.</p>
+<<<<<<< HEAD
+                <div class="table-main visible
+                -sm">
+=======
+                <div class="table-main">
+>>>>>>> b48dc749f13b31f03c4d8086b6542a02a8e6f391
+                    <div class="Rtable Rtable--3cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="alaska/index.aspx"><span class="numlistings">Alaska (11)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="kentucky/index.aspx"><span class="numlistings">Kentucky (88)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="new-york/index.aspx"><span class="numlistings">New York (522)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="alabama/index.aspx"><span class="numlistings">Alabama (70)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="louisiana/index.aspx"><span class="numlistings">Louisiana (81)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="ohio/index.aspx"><span class="numlistings">Ohio (236)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="arkansas/index.aspx"><span class="numlistings">Arkansas (34)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="massachusetts/index.aspx"><span class="numlistings">Massachusetts (164)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="oklahoma/index.aspx"><span class="numlistings">Oklahoma (63)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="arizona/index.aspx"><span class="numlistings">Arizona (96)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="maryland/index.aspx"><span class="numlistings">Maryland (153)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="oregon/index.aspx"><span class="numlistings">Oregon (65)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="california/index.aspx"><span class="numlistings">California (892)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="maine/index.aspx"><span class="numlistings">Maine (27)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="pennsylvania/index.aspx"><span class="numlistings">Pennsylvania (340)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="colorado/index.aspx"><span class="numlistings">Colorado (129)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="michigan/index.aspx"><span class="numlistings">Michigan (174)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="rhode-island/index.aspx"><span class="numlistings">Rhode Island (31)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="connecticut/index.aspx"><span class="numlistings">Connecticut (154)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="minnesota/index.aspx"><span class="numlistings">Minnesota (86)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="south-carolina/index.aspx"><span class="numlistings">South Carolina (92)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="washington-dc/index.aspx"><span class="numlistings">District of Columbia (21)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="missouri/index.aspx"><span class="numlistings">Missouri (92)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="south-dakota/index.aspx"><span class="numlistings">South Dakota (8)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="delaware/index.aspx"><span class="numlistings">Delaware (24)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="mississippi/index.aspx"><span class="numlistings">Mississippi (41)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="tennessee/index.aspx"><span class="numlistings">Tennessee (122)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="florida/index.aspx"><span class="numlistings">Florida (448)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="montana/index.aspx"><span class="numlistings">Montana (16)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="texas/index.aspx"><span class="numlistings">Texas (397)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="georgia/index.aspx"><span class="numlistings">Georgia (180)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="north-carolina/index.aspx"><span class="numlistings">North Carolina (151)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="utah/index.aspx"><span class="numlistings">Utah (47)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="hawaii/index.aspx"><span class="numlistings">Hawaii (35)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="north-dakota/index.aspx"><span class="numlistings">North Dakota (15)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="virginia/index.aspx"><span class="numlistings">Virginia (200)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="iowa/index.aspx"><span class="numlistings">Iowa (51)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="nebraska/index.aspx"><span class="numlistings">Nebraska (31)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="vermont/index.aspx"><span class="numlistings">Vermont (17)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="idaho/index.aspx"><span class="numlistings">Idaho (32)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="new-hampshire/index.aspx"><span class="numlistings">New Hampshire (31)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="washington/index.aspx"><span class="numlistings">Washington (146)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="illinois/index.aspx"><span class="numlistings">Illinois (270)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="new-jersey/index.aspx"><span class="numlistings">New Jersey (301)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="wisconsin/index.aspx"><span class="numlistings">Wisconsin (95)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="indiana/index.aspx"><span class="numlistings">Indiana (113)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="new-mexico/index.aspx"><span class="numlistings">New Mexico (36)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="west-virginia/index.aspx"><span class="numlistings">West Virginia (31)</span></a>
+                        </div>
+                    </div>
+                    <div class="Rtable Rtable--4cols Rtable--collapse">
+                        <div class="Rtable-cell" class="1">
+                            <a href="kansas/index.aspx"><span class="numlistings">Kansas (45)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="2">
+                            <a href="nevada/index.aspx"><span class="numlistings">Nevada (37)</span></a>
+                        </div>
+                        <div class="Rtable-cell" class="3">
+                            <a href="wyoming/index.aspx"><span class="numlistings">Wyoming (7)</span></a>
+                        </div>
+                    </div>
+                </div>
+<<<<<<< HEAD
+
+                <!-- SAME TABLE TO BE DISPLAYED BUT MOBILE FIRST VERSION --> 
+                <div class="table-main hidden-sm">
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="1">
+            <a href="alaska/index.aspx"><span class="numlistings">Alaska (11)</span></a>
+        </div>
+        <div class="Rtable-cell" class="1">
+            <a href="alabama/index.aspx"><span class="numlistings">Alabama (70)</span></a>
+        </div>
+        <div class="Rtable-cell" class="1">
+            <a href="arkansas/index.aspx"><span class="numlistings">Arkansas (34)</span></a>
+        </div>
+    </div> <!-- end -->
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="1">
+            <a href="arizona/index.aspx"><span class="numlistings">Arizona (96)</span></a>
+        </div>
+        <div class="Rtable-cell" class="1">
+            <a href="california/index.aspx"><span class="numlistings">California (892)</span></a>
+        </div>
+        <div class="Rtable-cell" class="1">
+            <a href="colorado/index.aspx"><span class="numlistings">Colorado (129)</span></a>
+        </div>
+    </div> <!-- end -->
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="1">
+            <a href="connecticut/index.aspx"><span class="numlistings">Connecticut (154)</span></a>
+        </div>
+        <div class="Rtable-cell" class="1">
+            <a href="washington-dc/index.aspx"><span class="numlistings">District of Columbia (21)</span></a>
+        </div>
+        <div class="Rtable-cell" class="1">
+            <a href="delaware/index.aspx"><span class="numlistings">Delaware (24)</span></a>
+        </div>
+    </div> <!-- end -->
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="1">
+            <a href="florida/index.aspx"><span class="numlistings">Florida (448)</span></a>
+        </div>
+        <div class="Rtable-cell" class="1">
+            <a href="georgia/index.aspx"><span class="numlistings">Georgia (180)</span></a>
+        </div>
+        <div class="Rtable-cell" class="1">
+            <a href="hawaii/index.aspx"><span class="numlistings">Hawaii (35)</span></a>
+        </div>
+    </div> <!-- end -->
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="1">
+            <a href="iowa/index.aspx"><span class="numlistings">Iowa (51)</span></a>
+        </div>
+        <div class="Rtable-cell" class="1">
+            <a href="idaho/index.aspx"><span class="numlistings">Idaho (32)</span></a>
+        </div>
+        <div class="Rtable-cell" class="1">
+            <a href="illinois/index.aspx"><span class="numlistings">Illinois (270)</span></a>
+        </div>
+    </div> <!-- end --> 
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="1">
+            <a href="indiana/index.aspx"><span class="numlistings">Indiana (113)</span></a>
+        </div>
+        <div class="Rtable-cell" class="1">
+            <a href="kansas/index.aspx"><span class="numlistings">Kansas (45)</span></a>
+        </div>
+        <!-- number two -->
+
+                <div class="Rtable-cell" class="2">
+            <a href="kentucky/index.aspx"><span class="numlistings">Kentucky (88)</span></a>
+        </div>
+    </div> <!-- end -->
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="2">
+            <a href="louisiana/index.aspx"><span class="numlistings">Louisiana (81)</span></a>
+        </div>
+        <div class="Rtable-cell" class="2">
+            <a href="massachusetts/index.aspx"><span class="numlistings">Massachusetts (164)</span></a>
+        </div>
+        <div class="Rtable-cell" class="2">
+            <a href="maryland/index.aspx"><span class="numlistings">Maryland (153)</span></a>
+        </div>
+    </div> <!-- end -->
+
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="2">
+            <a href="maine/index.aspx"><span class="numlistings">Maine (27)</span></a>
+        </div>
+        <div class="Rtable-cell" class="2">
+            <a href="michigan/index.aspx"><span class="numlistings">Michigan (174)</span></a>
+        </div>
+        <div class="Rtable-cell" class="2">
+            <a href="minnesota/index.aspx"><span class="numlistings">Minnesota (86)</span></a>
+        </div>
+    </div> <!-- end -->
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="2">
+            <a href="missouri/index.aspx"><span class="numlistings">Missouri (92)</span></a>
+        </div>
+        <div class="Rtable-cell" class="2">
+            <a href="mississippi/index.aspx"><span class="numlistings">Mississippi (41)</span></a>
+        </div>
+        <div class="Rtable-cell" class="2">
+            <a href="montana/index.aspx"><span class="numlistings">Montana (16)</span></a>
+        </div>
+    </div> <!-- end -->
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="2">
+            <a href="north-carolina/index.aspx"><span class="numlistings">North Carolina (151)</span></a>
+        </div>
+        <div class="Rtable-cell" class="2">
+            <a href="north-dakota/index.aspx"><span class="numlistings">North Dakota (15)</span></a>
+        </div>
+        <div class="Rtable-cell" class="2">
+            <a href="nebraska/index.aspx"><span class="numlistings">Nebraska (31)</span></a>
+        </div>
+    </div> <!-- end -->
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="2">
+            <a href="new-hampshire/index.aspx"><span class="numlistings">New Hampshire (31)</span></a>
+        </div>
+        <div class="Rtable-cell" class="2">
+            <a href="new-jersey/index.aspx"><span class="numlistings">New Jersey (301)</span></a>
+        </div>
+        <div class="Rtable-cell" class="2">
+            <a href="new-mexico/index.aspx"><span class="numlistings">New Mexico (36)</span></a>
+        </div>
+    </div> <!-- end --> 
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="2">
+            <a href="nevada/index.aspx"><span class="numlistings">Nevada (37)</span></a>
+        </div>
+
+                <div class="Rtable-cell" class="3">
+            <a href="new-york/index.aspx"><span class="numlistings">New York (522)</span></a>
+        </div>
+        <div class="Rtable-cell" class="3">
+            <a href="ohio/index.aspx"><span class="numlistings">Ohio (236)</span></a>
+        </div>
+    </div> <!-- end -->
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="3">
+            <a href="oklahoma/index.aspx"><span class="numlistings">Oklahoma (63)</span></a>
+        </div>
+        <div class="Rtable-cell" class="3">
+            <a href="oregon/index.aspx"><span class="numlistings">Oregon (65)</span></a>
+        </div>
+        <div class="Rtable-cell" class="3">
+            <a href="pennsylvania/index.aspx"><span class="numlistings">Pennsylvania (340)</span></a>
+        </div>
+    </div> <!-- end -->
+
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="3">
+            <a href="rhode-island/index.aspx"><span class="numlistings">Rhode Island (31)</span></a>
+        </div>
+        <div class="Rtable-cell" class="3">
+            <a href="south-carolina/index.aspx"><span class="numlistings">South Carolina (92)</span></a>
+        </div>
+        <div class="Rtable-cell" class="3">
+            <a href="south-dakota/index.aspx"><span class="numlistings">South Dakota (8)</span></a>
+        </div> 
+    </div> <!-- end -->
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="3">
+            <a href="tennessee/index.aspx"><span class="numlistings">Tennessee (122)</span></a>
+        </div>
+        <div class="Rtable-cell" class="3">
+            <a href="texas/index.aspx"><span class="numlistings">Texas (397)</span></a>
+        </div>
+        <div class="Rtable-cell" class="3">
+            <a href="utah/index.aspx"><span class="numlistings">Utah (47)</span></a>
+        </div>
+    </div> <!-- end -->
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="3">
+            <a href="virginia/index.aspx"><span class="numlistings">Virginia (200)</span></a>
+        </div>
+        <div class="Rtable-cell" class="3">
+            <a href="vermont/index.aspx"><span class="numlistings">Vermont (17)</span></a>
+        </div>
+        <div class="Rtable-cell" class="3">
+            <a href="washington/index.aspx"><span class="numlistings">Washington (146)</span></a>
+        </div>
+    </div> <!-- end -->
+    <div class="Rtable Rtable--3cols Rtable--collapse">
+        <div class="Rtable-cell" class="3">
+            <a href="wisconsin/index.aspx"><span class="numlistings">Wisconsin (95)</span></a>
+        </div>
+        <div class="Rtable-cell" class="3">
+            <a href="west-virginia/index.aspx"><span class="numlistings">West Virginia (31)</span></a>
+        </div>
+        <div class="Rtable-cell" class="3">
+            <a href="wyoming/index.aspx"><span class="numlistings">Wyoming (7)</span></a>
+        </div>
+    </div> <!-- end -->
+</div>
+<!-- END OF MOBILE FIRST SECOND TABLE --> 
+=======
+>>>>>>> b48dc749f13b31f03c4d8086b6542a02a8e6f391
+</div>
+            <div class="col-sm-4">
+                <h2>Join Now</h2>
+                <p class="ma-p ma-p--default">Jump start your online promotion now by signing up for a listing in Dental Implants Online.</p>
+                <div align="right" class="text-right">
+                    <p class="neg_margin"><a class="ma-btn ma-btn--small ma-btn--primary" href="#">Get Started Now &gt;&gt;</a></p>
+                </div>
+            
+            <div class="featured well">
+                <h2>Featured Dental Implant Practices</h2>
+                <p class="ma-p ma-p--default"><a href="http://www.implantdentistrylansing.com/" target="_blank">Implant Dentistry of Greater Lansing<br>
+            <span class="city">Lansing, MI</span></a></p>
+                <p class="ma-p ma-p--default"><a href="http://www.nwoms.com/" target="_blank">Peter Chemello DDS<br>
+            <span class="city">Arlington Heights, IL</span></a></p>
+                <p class="ma-p ma-p--default"><a href="http://www.mvoms.com/" target="_blank">Dr Fred Hammond and Dr Tim Smith<br>
+            <span class="city">San Diego, CA</span></a></p>
+                <p class="ma-p ma-p--default"><a href="http://www.sanluisoralsurgery.com/" target="_blank">San Luis Oral and Maxillofacial Surgery and Dental Implant Center<br>
+            <span class="city">San Luis Obispo, CA</span></a></p>
+                <p class="ma-p ma-p--default"><a href="http://www.titaniumimplant.com/" target="_blank">Peter Moy DDS<br>
+            <span class="city">Los Angeles, CA</span></a></p>
+                <p class="ma-p ma-p--default"><a href="http://www.mhoms.com/" target="_blank">John Monterubio DDS<br>
+            <span class="city">Saint Louis, MO</span></a></p>
+            </div>
+            </div>
+            </div> <!-- end of col -->
+            </div>
+        </div><!-- end of col-->
+    </main>
+    <!-- PG break -->
+    <div class="ma-separator-dashed-image space-top-8 container"></div>
+    <!-- PG break -->
+    <section class="container" aria-label="Articles on dental implants">
+                                    <div class="articles">
+                    <h2>Articles: Implant Dentists on Dental Implants</h2>
+                    <p class="ma-p ma-p--default">Read about the doctor's perspective on dental implants and technology today.</p>
+                    <p class="ma-p ma-p--default"><a href="articles/article0412a.aspx">Are Dental Implants Right For You?</a>
+                        <br> By Craig Leffingwell, DDS</p>
+                </div>
+    </section>
+    <!-- PG break -->
+    <div class="ma-separator-dashed-image space-top-8 container"></div>
+    <!-- PG break -->
+    <section class="container" aria-label="FAQ section on dental implants">
+<h2>FAQ: About Dental Implants</h2>
+<p class="ma-p ma-p--default">Are you considering dental implants? The following articles will help you become
+better acquainted with dental implants and the technology behind them.</p>
+<h3>Why Replace Missing Teeth</h3>
+<p class="ma-p ma-p--default">There are more reasons to replace your missing teeth than a gap in your smile.
+The following article discusses the health related issues involved with having
+one or more teeth missing.</p>
+<p class="ma-p ma-p--default"><a href="patients/missing-teeth.aspx">More about missing teeth</a></p>
+<h3>Options for Missing Teeth</h3>
+<p class="ma-p ma-p--default">Dental Implants are the modern day solution to missing teeth. Dentures have
+progressed a long way since ivory prosthetics, but many people with missing
+teeth are still looking for a better solution. Review the differences between
+dental implant supported prosthetics and traditional dentures.</p>
+<p class="ma-p ma-p--default"><a href="patients/implants-vs-dentures.aspx">More about dental implants vs. dentures</a></p>
+<h3>The Implant Dentist</h3>
+<p class="ma-p ma-p--default">Who places the dental implant? Meet the team of dentists and specialists that
+work together to improve your dental health. Learn more about the roles that
+each physician plays in the placement of your dental implants.</p>
+<p class="ma-p ma-p--default"><a href="patients/implant-dentists.aspx">More about implant dentists</a></p>
+</section>

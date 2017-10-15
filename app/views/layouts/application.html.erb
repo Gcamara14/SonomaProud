@@ -3,15 +3,118 @@
   <head>
     <title>SonomaProud</title>
     <%= csrf_meta_tags %>
-
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"><!--     STYLES     -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.fontawesome.com/99e7a6e2c6.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="mainApp margin-reset">
 
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
+     <span class="notice1"><%= notice %></span>
+     <span class="alert1"><%= alert %></span>
+
+
+    <!--=========================================-->
+    <!--                 HEADER                  -->
+    <!--=========================================-->
+    <header class="ma-header ma-header--large">
+        <div class="ma-header__logo-container">
+            <a class="link-reset">
+                <div class="content">
+                    <div class="ma-logo"></div>
+                </div>
+            </a>
+        </div>
+        <div class="ma-header__search-container">
+            <form class="form-content hidden-xs">
+                <div class="ma-search-bar">
+                    <i class="ma-search-bar__icon" data-feather="search"></i>
+                    <label aria-hidden="true" class="screen-reader-only">Sonoma County Strong!</label>
+                    <input class="ma-search-bar__input" placeholder="#SONOMA COUNTY STRONG" type="text" disabled>
+                </div>
+            </form>
+        </div>
+        <div class="ma-header__nav-container">
+            <nav>
+                <ul class="ma-nav-list">
+                    <li class="ma-nav-list__item">
+                        <button class="ma-nav-list__item__btn">Log in</button>
+                    </li>
+                    <li class="ma-nav-list__item">
+                        <button class="ma-nav-list__item__btn">Sign up</button>
+                    </li>
+                    <li>
+                        <a class="ma-nav-list__item__btn link-reset" href="">
+                            <div class="content">
+                                <div class="ma-avatar ma-avatar--tiny ma-avatar--border-minimal round"><img alt="" height="32" src="https://pbs.twimg.com/profile_images/888407217040498689/rp8G6S4N_400x400.jpg" width="32"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="ma-subnav ma-subnav--simple">
+        <nav class="container">
+            <div class="ma-subnav__item">
+                <div class="content">
+                    <a href="">Home</a>
+                </div>
+            </div><span class="space-right-1 space-left-1">·</span>
+            <div class="ma-subnav__item">
+                <div class="content">
+                    <a href="">About Dental Implants</a>
+                </div>
+            </div><span class="space-right-1 space-left-1">·</span>
+            <div class="ma-subnav__item">
+                <div class="content">
+                    <a href="">Financing Dental Implants</a>
+                </div>
+            </div><span class="space-right-1 space-left-1">·</span>
+            <div class="ma-subnav__item">
+                <div class="content">
+                    <a class="active" href="">Dental Implant Photos</a>
+                </div>
+            </div><span class="space-right-1 space-left-1">·</span>
+            <div class="ma-subnav__item">
+                <div class="content">
+                    <a href="">For Implant Dentist</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="space-3"></div>
+    <div class="ma-subnav ma-subnav--tabs">
+        <nav class="container">
+            <div class="ma-subnav__item space-right-4">
+                <div class="content">
+                    <a class="link-reset" href="">FOR YOU</a>
+                </div>
+            </div>
+            <div class="ma-subnav__item space-right-4">
+                <div class="content active">
+                    <a class="link-reset" href="">HOMES</a>
+                </div>
+            </div>
+            <div class="ma-subnav__item space-right-4">
+                <div class="content">
+                    <a class="link-reset" href="">EXPERIENCES</a>
+                </div>
+            </div>
+            <div class="ma-subnav__item">
+                <div class="content">
+                    <a class="link-reset" href="">PLACES</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
     <%= yield %>
+
+       <script>
+               feather.replace();
+    </script>
   </body>
 </html>
