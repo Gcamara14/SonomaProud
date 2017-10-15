@@ -1,61 +1,131 @@
-<%= image_tag @business.image.url(:medium) %>
+<div class="space-3 container">
+
+<h1><strong><%= @business.name %></strong> <small><i class="fa fa-check-circle verified-hex" aria-hidden="true"></i></small>
+</h1>
+
+<div class="space-5"></div>
+
+<%= image_tag @business.image.url(:large), class: "img-responsive", alt: "Image of #{@business.name}" %>
 
 
-<p>
-  <strong>Name:</strong>
-  <%= @business.name %>
-</p>
+<h3><strong>About the business</strong></h3>
+<p class="ma-p ma-p--default"><%= @business.description %> </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @business.description %>
-</p>
+<h3><strong>More Business Info</strong></h3>
 
-<p>
-  <strong>Location:</strong>
-  <%= @business.location %>
-</p>
+<% unless @business.location.blank? %><p class="ma-p ma-p--default"><strong>Location:</strong> <%= @business.location %></p> <% end %>
+<% unless @business.phone.blank? %><p class="ma-p ma-p--default"><strong>Phone:</strong> <%= @business.phone %></p> <% end %>
+<% unless @business.website.blank? %><p class="ma-p ma-p--default"><strong>Website:</strong> <%= @business.website %></p> <% end %>
+<% if user_signed_in? %>
+<p class="well"><strong>= = = CUSTOM HTML Below = = = <small>This message is only visible to logged in users</small></p>
+<% end %>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @business.phone %>
-</p>
-
-<p>
-  <strong>Facebook:</strong>
-  <%= @business.facebook %>
-</p>
-
-<p>
-  <strong>Google:</strong>
-  <%= @business.google %>
-</p>
-
-<p>
-  <strong>Yelp:</strong>
-  <%= @business.yelp %>
-</p>
-
-<p>
-  <strong>Instagram:</strong>
-  <%= @business.instagram %>
-</p>
-
-<p>
-  <strong>Twitter:</strong>
-  <%= @business.twitter %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @business.website %>
-</p>
-
-<p>
-  <strong>Html:</strong>
-  <%= @business.html %>
-</p>
+<div class="custom_html space-8 custom-<%= @business.name %>">
+<%= @business.html.html_safe  %>
+</div>
 
 
+<div class="row">
+<div class="col-sm-4 space-2 text-center">
+<% unless @business.facebook.blank? %>
+<a href="<%= @business.facebook %>" target="_blank">
+  <button class="ma-btn ma-btn--small ma-btn--facebook">
+  <div class="ma-btn__content">
+      <div class="ma-btn__content__icon-container">
+          <i aria-hidden="true" class="fa fa-facebook"></i>
+      </div>
+      <div class="space-left-2">
+          <span>Give them a like on facebook</span>
+      </div>
+  </div>
+</button>
+</a>
+<% end %>
+</div>
+<div class="col-sm-4 space-2 text-center">
+<% unless @business.google.blank? %>
+<a href="<%= @business.google %>" target="_blank">
+  <button class="ma-btn ma-btn--small ma-btn--google">
+                    <div class="ma-btn__content">
+                        <div class="ma-btn__content__icon-container">
+                            <svg aria-hidden="true" role="presentation" style="display: block; height: 18px; width: 18px;" viewBox="0 0 18 18">
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M9 3.48c1.69 0 2.83.73 3.48 1.34l2.54-2.48C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.96l2.91 2.26C4.6 5.05 6.62 3.48 9 3.48z" fill="#EA4335"></path>
+                                <path d="M17.64 9.2c0-.74-.06-1.28-.19-1.84H9v3.34h4.96c-.1.83-.64 2.08-1.84 2.92l2.84 2.2c1.7-1.57 2.68-3.88 2.68-6.62z" fill="#4285F4"></path>
+                                <path d="M3.88 10.78A5.54 5.54 0 0 1 3.58 9c0-.62.11-1.22.29-1.78L.96 4.96A9.008 9.008 0 0 0 0 9c0 1.45.35 2.82.96 4.04l2.92-2.26z" fill="#FBBC05"></path>
+                                <path d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.84-2.2c-.76.53-1.78.9-3.12.9-2.38 0-4.4-1.57-5.12-3.74L.97 13.04C2.45 15.98 5.48 18 9 18z" fill="#34A853"></path>
+                                <path d="M0 0h18v18H0V0z"></path>
+                            </g></svg>
+                        </div>
+                        <div class="space-left-2">
+                            <span>Leave a review on google</span>
+                        </div>
+                    </div>
+  </button>
+  </a>
+  <% end %>
+</div>
+<div class="col-sm-4 space-2 text-center">
+<% unless @business.yelp.blank? %>
+  <a href="<%= @business.yelp %>" target="_blank">
+  <button class="ma-btn ma-btn--small ma-btn--yelp">
+                    <div class="ma-btn__content">
+                        <div class="ma-btn__content__icon-container">
+                            <i class="fa fa-yelp" aria-hidden="true"></i>
+                        </div>
+                        <div class="space-left-2">
+                            <span>Leave them a review on yelp</span>
+                        </div>
+                    </div>
+  </button>
+  </a>
+  <% end %>
+</div>
+</div>
+ 
+<div class="row">
+<div class="col-sm-6 space-2 text-center">
+<% unless @business.instagram.blank? %>
+    <a href="<%= @business.instagram %>" target="_blank">
+  <button class="ma-btn ma-btn--small ma-btn--instagram">
+                    <div class="ma-btn__content">
+                        <div class="ma-btn__content__icon-container">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+                        <div class="space-left-2">
+                            <span>Follow them on instagram</span>
+                        </div>
+                    </div>
+  </button>
+  </a>
+  <% end %>
+</div>
+
+
+<div class="col-sm-6 space-2 text-center">
+<% unless @business.twitter.blank? %>
+      <a href="<%= @business.twitter %>" target="_blank">
+  <button class="ma-btn ma-btn--small ma-btn--twitter">
+                    <div class="ma-btn__content">
+                        <div class="ma-btn__content__icon-container">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                        <div class="space-left-2">
+                            <span>Follow them on twitter</span>
+                        </div>
+                    </div>
+  </button>
+  </a>
+  <% end %>
+</div>
+</div>
+
+<div class="space-top-5">
+<% if user_signed_in? && @business.user == current_user %>
 <%= link_to 'Edit', edit_business_path(@business) %> |
-<%= link_to 'Back', businesses_path %>
+<% end %>
+<%= link_to 'Go Back', businesses_path %>
+</div>
+
+</div>
+

@@ -12,6 +12,7 @@
 
   <body class="mainApp margin-reset">
 
+    <a class="screen-reader-only" href="#main-content">Skip to main content</a>
 
     <% flash.each do |key, value| %>
       <%= content_tag :div, value, class: "ma-input ma-input--default ma-input--#{key}" %>
@@ -130,7 +131,8 @@
         </nav>
     </div>
 
+    <main role="main" id="main-content" class="content-main">
     <%= yield %>
-
+    </main>
   </body>
 </html>

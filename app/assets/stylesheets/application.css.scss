@@ -724,13 +724,32 @@ body.mainApp {
     color: #484848;
     background-color: #FFF;
     border-color: #484848; }
-  .ma-btn--google .ma-btn__content {
+  .ma-btn--google .ma-btn__content, .ma-btn--yelp .ma-btn__content, .ma-btn--twitter .ma-btn__content, .ma-btn--instagram .ma-btn__content {
     margin: 0px auto;
     display: table; }
-    .ma-btn--google .ma-btn__content__icon-container {
+    .ma-btn--google .ma-btn__content__icon-container, .ma-btn--yelp .ma-btn__content__icon-container, .ma-btn--twitter .ma-btn__content__icon-container, .ma-btn--instagram .ma-btn__content__icon-container {
       display: table-cell;
       vertical-align: middle; }
+	.ma-btn--yelp{
+	  color: #FFF;
+   	  background-color: #c41200;
+      border-color: #c41200; 
+	}
+	.ma-btn--twitter{
+	  color: #FFF;
+   	  background-color: #439cd6;
+      border-color: #439cd6; 
+	}
+	.ma-btn--instagram{
+	  color: #FFF;
+   	  background-color: #e95950;
+      border-color: #e95950; 
+	}
 
+	.verified-hex{
+		color: #0074ba;
+	}	
+	
 .ma-btn[disabled] {
   opacity: 0.25;
   cursor: not-allowed; }
