@@ -16,4 +16,7 @@ class WelcomeController < ApplicationController
 
   def why
   end
+
+  def how
+  end
 end
