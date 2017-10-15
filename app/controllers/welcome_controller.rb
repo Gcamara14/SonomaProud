@@ -10,4 +10,8 @@ class WelcomeController < ApplicationController
 
   def contact
   end
+
+  def feedback
+  	
+  end
 end
