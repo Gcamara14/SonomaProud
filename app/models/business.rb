@@ -5,4 +5,6 @@ class Business < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
   belongs_to :user
+
+  validates :name, :description, presence: true
 end

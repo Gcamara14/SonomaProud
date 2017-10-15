@@ -881,7 +881,7 @@ body.mainApp {
   .ma-input--large {
     padding: 13px;
     font-size: 18px; }
-  .ma-input--invalid, .ma-input--alert {
+  .ma-input--invalid, .ma-input--alert, #error_explanation {
     background-color: #fff2ef;
     border-color: #d93900; }
   .ma-input--notice {
