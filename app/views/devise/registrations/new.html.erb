@@ -1,3 +1,14 @@
+
+<div class="container">
+<section class="forms-section container">
+            <h2>Thank you for registering to help share a story of our strong community</h2>
+            <div class="row">
+                <div class="col-xs-12 space-5">
+                    <div class="ma-box">
+                        <div class="ma-box__title">
+                            Remember...Always Love... #sonomastrong #sonomaproud
+                        </div>
+                        <div class="ma-box__content">
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -5,7 +16,7 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class: "ma-input ma-input--default ma-textarea", placeholder: "Enter your email"  %>
   </div>
 
   <div class="field">
@@ -13,17 +24,26 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", class: "ma-input ma-input--default ma-textarea", placeholder: "enter your password" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "ma-input ma-input--default ma-textarea", placeholder: "Enter the same password from above" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="actions space-top-4">
+    <%= f.submit "Sign up", class: "ma-btn ma-btn--default ma-btn--primary" %>
   </div>
 <% end %>
 
+<div class="space-top-4">
 <%= render "devise/shared/links" %>
+</div>
+                        </div>
+                        <div class="ma-box__footer"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>

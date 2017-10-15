@@ -32,23 +32,29 @@
             </a>
         </div>
         <div class="ma-header__search-container">
-            <form class="form-content hidden-xs">
+            <form class="form-content">
                 <div class="ma-search-bar">
-                    <i class="ma-search-bar__icon" data-feather="search"></i>
+                    <!-- <i class="ma-search-bar__icon" data-feather="search"></i> -->
                     <label aria-hidden="true" class="screen-reader-only">Sonoma County Strong!</label>
-                    <input class="ma-search-bar__input" placeholder="#SONOMA COUNTY STRONG" type="text" disabled>
+                    <input class="ma-search-bar__input" placeholder="#SONOMAPROUD" type="text" disabled>
                 </div>
             </form>
         </div>
         <div class="ma-header__nav-container">
             <nav>
                 <ul class="ma-nav-list">
+                <!-- SHOW THIS IF LOGGED IN -->
+                <% if user_signed_in? %>
                     <li class="ma-nav-list__item">
-                        <button class="ma-nav-list__item__btn">Log in</button>
+                    <%= link_to (new_business_path) do %>
+                        <button class="ma-nav-list__item__btn">Write a new Post</button>
+                    <% end %>
                     </li>
                     <li class="ma-nav-list__item">
-                        <button class="ma-nav-list__item__btn">Sign up</button>
+                    <%= link_to destroy_user_session_path, method: :delete do %>
+                        <button class="ma-nav-list__item__btn">Log Out</button>
                     </li>
+                    <% end %>
                     <li>
                     <%= link_to edit_user_registration_path, :class => "ma-nav-list__item__btn link-reset"  do %>
                         
@@ -57,6 +63,7 @@
                             </div>
                         <% end %>
                     </li>
+                    <% end %>
                 </ul>
             </nav>
         </div>
@@ -117,9 +124,5 @@
     </div>
 
     <%= yield %>
-
-       <script>
-               feather.replace();
-    </script>
   </body>
 </html>
