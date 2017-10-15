@@ -1,6 +1,8 @@
 class BusinessesController < ApplicationController
   before_action :set_business, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit]
+  before_action :require_same_user, only: [:edit]
+
 
   # GET /businesses
   # GET /businesses.json
@@ -72,4 +74,12 @@ class BusinessesController < ApplicationController
     def business_params
       params.require(:business).permit(:name, :description, :location, :phone, :facebook, :google, :yelp, :instagram, :twitter, :website, :html, :user_id, :image, :slug)
     end
+
+      def require_same_user
+    if current_user != @business.user
+      flash[:alert] = "That is not your post... you can't edit that!"
+      redirect_to root_path
+    end
+  end
+
 end
