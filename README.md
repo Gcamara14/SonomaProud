@@ -13,7 +13,7 @@ Why am I making this?
 - [x] Setup the website in git  
 - [ ] Get an excell list of all the businesses that have helped donate  
 - [x] Develop The DB design  
-- [ ] Develop the UI for the website  
+- [x] Develop the UI for the website  
 - [x] Begin working on the backend  
 - [x] add gems / dependancies  
 - [x] add user authentication  
@@ -29,9 +29,9 @@ Why am I making this?
 
 - [x] User Authentication  
 - [ ] Business schema  
-- [ ] Image Uploading  
+- [x] Image Uploading  
 - [ ] Website Accessibility  
-- [ ] Image Optimization  
+- [x] Image Optimization  
 - [x] SEO Friendly  
 - [ ] Add businesses who have been remarkable and link their social media  
 - [ ] Add user stories of people who have been remarkable  

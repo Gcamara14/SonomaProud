@@ -1,5 +1,7 @@
-<div class="space-3 container">
+<% title "#{@business.name} is an Endorsed & Supported business in the #{@business.location} community #SonomaProud "%>
+<% meta_description @business.description %>
 
+<div class="space-3 container">
 <h1><strong><%= @business.name %></strong> <small><i class="fa fa-check-circle verified-hex" aria-hidden="true"></i></small>
 </h1>
 
@@ -14,8 +16,8 @@
 <h3><strong>More Business Info</strong></h3>
 
 <% unless @business.location.blank? %><p class="ma-p ma-p--default"><strong>Location:</strong> <%= @business.location %></p> <% end %>
-<% unless @business.phone.blank? %><p class="ma-p ma-p--default"><strong>Phone:</strong> <%= @business.phone %></p> <% end %>
-<% unless @business.website.blank? %><p class="ma-p ma-p--default"><strong>Website:</strong> <%= @business.website %></p> <% end %>
+<% unless @business.phone.blank? %><p class="ma-p ma-p--default"><strong>Phone:</strong> <a class="link-reset" href="tel:<%= @business.phone %>"><%= @business.phone %></a></p> <% end %>
+<% unless @business.website.blank? %><p class="ma-p ma-p--default"><strong>Website:</strong> <a href="<%= @business.website %>" target="_blank" class="link-reset"><%= @business.website %></a></p> <% end %>
 <div class="social-media social-links social-media social-links ma-p ma-p--small space-4 space-top-4">
             <% unless @business.facebook.blank? %>
               <a href="<%= @business.facebook %>" class="ma-link--simple--minimal" target="_blank">

@@ -31,3 +31,13 @@
 
 en:
   hello: "Hello world"
+en:
+  meta:
+    default:
+      title: "Sonoma, CA  Endorsed Businesses | List of Businesses That Helped The Fire Relief Efforts | #SonomaProud"
+      keywords: ''
+      description: 'Businesses in Sonoma, CA that helped evacuees and first responders during the fire relief efforts. These business demonstrate the loving community we have in Sonoma County. #SonomaProud'
+    businesses_index:
+      title: "Sonoma, CA  Endorsed Businesses | List of Businesses That Helped The Fire Relief Efforts | #SonomaProud"
+      keywords: 'sonoma, sonoma businesses, sonomaproud, endorsed sonoma businesses'
+      description: 'Businesses in Sonoma, CA that helped evacuees and first responders during the fire relief efforts. These business demonstrate the loving community we have in Sonoma County. #SonomaProud'

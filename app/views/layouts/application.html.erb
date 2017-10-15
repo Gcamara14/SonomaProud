@@ -1,7 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html class="" lang="en">
   <head>
-    <title>SonomaProud</title>
+
+
+<% if :meta_description.present? %>
+    <meta content="<%= meta_description %>" name="description"/>
+  <% else %>
+    <meta name="description" content="Businesses in Sonoma, CA that helped evacuees and first responders during the fire relief efforts. These business demonstrate the loving community we have in Sonoma County. #SonomaProud" />
+  <% end %>
+
+
+    <meta content="<%= meta_keywords %>" name="keywords"/>
+    
+
+    <title> 
+    <% if yield(:title).present? %>
+        <%= yield(:title) %>
+    <% else %>
+        Sonoma, CA  Endorsed Businesses | List of Businesses That Helped The Fire Relief Efforts | #SonomaProud
+    <% end %>
+</title>
+
+
+
     <%= csrf_meta_tags %>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"><!--     STYLES     -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -67,7 +88,7 @@
                     <%= link_to edit_user_registration_path, :class => "ma-nav-list__item__btn link-reset"  do %>
                         
                             <div class="content">
-                                <div class="ma-avatar ma-avatar--tiny ma-avatar--border-minimal round"><img alt="" height="32" src="https://pbs.twimg.com/profile_images/888407217040498689/rp8G6S4N_400x400.jpg" width="32"></div>
+                                <div class="ma-avatar ma-avatar--tiny ma-avatar--border-minimal round"><img alt="" height="32" src="" width="32"></div>
                             </div>
                         <% end %>
                     </li>

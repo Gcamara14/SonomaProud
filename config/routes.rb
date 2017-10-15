@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'welcome/why'
 
 
-  root to: 'welcome#index'
+  root to: 'businesses#index'
 
 
   resources :businesses
