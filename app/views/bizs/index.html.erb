@@ -1,0 +1,49 @@
+<h1 class="space-top-3 container">These Businsseses are waiting to be approved!</h1>
+
+<p class=" container space-7 space-top-5 ma-p ma-p--default alert ma-input--notice"> <strong>The following businesses will need to be reviewed before being submitted to the main page... Thanks for your patience!</strong></p>
+
+<div class="container">
+<div class="row display-flex">
+  <% @bizs.each_slice(3)  do |bizs| %>
+    
+    <% bizs.each  do |biz| %>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="inner-col well space-3 space-top-3">
+        
+          <h2><strong><%= biz.name %></strong><small> <i class="fa fa-check-circle verified-hex" aria-hidden="true"></i></small></h2>
+          <h6><%= biz.created_at.strftime('%b %d, %Y') %></h6>
+          <p class="ma-p ma-p--small"> <%= raw(biz.description).truncate(358) %> <%= link_to "read more", biz %></p>
+          <div class="social-media social-links social-media social-links ma-p ma-p--small space-4 space-top-4">
+            <% unless biz.facebook.blank? %>
+              <a href="<%= biz.facebook %>" class="ma-link--simple--minimal" target="_blank">
+                <i class="fa fa-facebook fa-4" aria-hidden="true"></i>
+                </a>
+            <%end %>
+            <% unless biz.google.blank? %>
+              <a href="<%= biz.google %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-google-plus fa-4" aria-hidden="true"></i>
+              </a>
+            <% end %>            
+            <% unless biz.yelp.blank? %>
+              <a href="<%= biz.yelp %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-yelp fa-4" aria-hidden="true"></i>
+              </a>
+            <% end %>
+            <% unless biz.instagram.blank? %>
+              <a href="<%= biz.instagram %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-instagram fa-4" aria-hidden="true"></i>
+                </a>
+            <% end %>
+            <% unless biz.twitter.blank? %>
+              <a href="<%= biz.twitter %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-twitter fa-4" aria-hidden="true"></i>
+                </a>
+            <% end %>
+          </div>
+          <%= link_to "Get More Info", biz, class: "ma-btn ma-btn--small ma-btn--minimal ma-btn--block space-1" %> 
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>

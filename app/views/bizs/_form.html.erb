@@ -1,0 +1,83 @@
+<%= form_with(model: biz, local: true, html: { multipart: true }) do |form| %>
+  <% if biz.errors.any? %>
+    <div id="error_explanation" class="container alert">
+      <h2><%= pluralize(biz.errors.count, "error") %> prohibited this biz from being saved:</h2>
+
+      <ul>
+      <% biz.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<section class="forms-section container">
+            <h2>Enter the bussiness information</h2>
+            <div class="row">
+                <div class="col-xs-12 space-5">
+                    <div class="ma-box">
+                        <div class="ma-box__title">
+                            Please try your best not to leave any info out.
+                        </div>
+                        <div class="ma-box__content">
+                            <form class="ma-form ma-form--basic">
+                                <div class="field form-group">
+                                  <%= form.label :name, 'Bussiness Name'%>
+                                  <%= form.text_field :name, id: :biz_name, class: "ma-input ma-input--default", id: "input1", placeholder: "Name", type: "text" %>
+                                </div><!-- Default Input Text -->
+
+                                <div class="field form-group">
+                                  <%= form.label :description %>
+                                  <%= form.text_area :description, id: :biz_description, class: "ma-input ma-input--default ma-textarea", id: "input2", placeholder: "Enter a description of who they are, what they did?", type: "text", cols: "40", rows: "5"%>
+                                </div>
+
+                                <div class="field form-group">
+                                  <%= form.label :location %>
+                                  <%= form.text_field :location, id: :biz_location, class: "ma-input ma-input--default", id: "input3", placeholder: "Bussiness Full Address", type: "text"%>
+                                </div>
+
+                                <div class="field form-group">
+                                  <%= form.label :phone %>
+                                  <%= form.text_field :phone, id: :biz_phone, class: "ma-input ma-input--default", id: "input4", placeholder: "555-555-5555", type: "text"%>
+                                </div>
+
+                                <div class="field form-group">
+                                  <%= form.label :facebook %>
+                                  <%= form.text_field :facebook, id: :biz_facebook, class: "ma-input ma-input--default", id: "input5", placeholder: "Facebook URL", type: "text"%>
+                                </div>
+
+                                <div class="field form-group">
+                                  <%= form.label :google %>
+                                  <%= form.text_field :google, id: :biz_google, class: "ma-input ma-input--default", id: "input6", placeholder: "Google Page / Review Url (see gio for help if needed)", type: "text"%>
+                                </div>
+
+                                <div class="field form-group">
+                                  <%= form.label :yelp %>
+                                  <%= form.text_field :yelp, id: :biz_yelp, class: "ma-input ma-input--default", id: "input7", placeholder: "Yelp url", type: "text"%>
+                                </div>
+
+                                <div class="field form-group">
+                                  <%= form.label :instagram %>
+                                  <%= form.text_field :instagram, id: :biz_instagram, class: "ma-input ma-input--default", id: "input8", placeholder: "Instagram URL", type: "text"%>
+                                </div>
+
+                                <div class="field form-group">
+                                  <%= form.label :twitter %>
+                                  <%= form.text_field :twitter, id: :biz_twitter, class: "ma-input ma-input--default", id: "input9", placeholder: "Twitter Url", type: "text"%>
+                                </div>
+
+                                <div class="field form-group">
+                                  <%= form.label :website %>
+                                  <%= form.text_field :website, id: :biz_website, class: "ma-input ma-input--default", id: "input10", placeholder: "Website URL", type: "text"%>
+                                </div>
+                                 <div class="actions">
+                                    <%= form.submit "Submit this Bussiness", class: 'ma-btn ma-btn--default ma-btn--primary' %>
+                                  </div>
+                               <% end %>
+                            </form>
+                        </div>
+                        <div class="ma-box__footer"></div>
+                    </div>
+                </div>
+            </div>
+        </section>

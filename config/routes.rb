@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :bizs, :path => 'submit-a-biz'
+
   devise_for :users
   get 'welcome/index'
 

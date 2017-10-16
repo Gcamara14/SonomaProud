@@ -1,8 +1,6 @@
-
-
 <%= form_with(model: business, local: true, html: { multipart: true }) do |form| %>
   <% if business.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert container">
       <h2><%= pluralize(business.errors.count, "error") %> prohibited this business from being saved:</h2>
 
       <ul>

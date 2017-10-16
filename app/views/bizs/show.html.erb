@@ -1,0 +1,159 @@
+<% title "#{@biz.name} is an Endorsed & Supported biz in the #{@biz.location} community #SonomaProud "%>
+<% meta_description @biz.description %>
+
+<p class="ma-p ma-p--default alert space-top-3 container ma-input--notice"><strong>Thank you for your submission! We will review this business and post as soon as possible. <%= link_to 'Please submit more by clicking here.', new_biz_path, class: "link-reset" %></strong></p>
+
+<div class="space-3 container">
+<h1><strong><%= @biz.name %></strong> <small><i class="fa fa-check-circle verified-hex" aria-hidden="true"></i></small>
+</h1>
+
+<div class="space-5"></div>
+
+
+<h3><strong>About the business</strong></h3>
+<p class="ma-p ma-p--default"><%= @biz.description %> </p>
+
+<h3><strong>More business Info</strong></h3>
+
+<% unless @biz.location.blank? %><p class="ma-p ma-p--default"><strong>Location:</strong> <%= @biz.location %></p> <% end %>
+<% unless @biz.phone.blank? %><p class="ma-p ma-p--default"><strong>Phone:</strong> <a class="link-reset" href="tel:<%= @biz.phone %>"><%= @biz.phone %></a></p> <% end %>
+<% unless @biz.website.blank? %><p class="ma-p ma-p--default"><strong>Website:</strong> <a href="<%= @biz.website %>" target="_blank" class="link-reset"><%= @biz.website %></a></p> <% end %>
+<div class="social-media social-links social-media social-links ma-p ma-p--small space-4 space-top-4">
+            <% unless @biz.facebook.blank? %>
+              <a href="<%= @biz.facebook %>" class="ma-link--simple--minimal" target="_blank">
+                <i class="fa fa-facebook fa-4" aria-hidden="true"></i>
+                </a>
+            <%end %>
+            <% unless @biz.google.blank? %>
+              <a href="<%= @biz.google %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-google-plus fa-4" aria-hidden="true"></i>
+                </a>
+            <% end %>            
+            <% unless @biz.yelp.blank? %>
+              <a href="<%= @biz.yelp %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-yelp fa-4" aria-hidden="true"></i>
+              </a>
+            <% end %>
+            <% unless @biz.instagram.blank? %>
+              <a href="<%= @biz.instagram %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-instagram fa-4" aria-hidden="true"></i>
+                </a>
+            <% end %>
+            <% unless @biz.twitter.blank? %>
+              <a href="<%= @biz.twitter %>" class="ma-link--simple--minimal" target="_blank">            
+                <i class="fa fa-twitter fa-4" aria-hidden="true"></i>
+                </a>
+            <% end %>
+          </div>
+
+
+
+<h2 class="text-center space-5 space-top-5">Find them online!</h2>
+
+<div class="row">
+<div class="col-sm-4 space-2 text-center">
+<% unless @biz.facebook.blank? %>
+<a href="<%= @biz.facebook %>" target="_blank">
+  <button class="ma-btn ma-btn--small ma-btn--facebook">
+  <div class="ma-btn__content">
+      <div class="ma-btn__content__icon-container">
+          <i aria-hidden="true" class="fa fa-facebook"></i>
+      </div>
+      <div class="space-left-2">
+          <span>Give them a like on facebook</span>
+      </div>
+  </div>
+</button>
+</a>
+<% end %>
+</div>
+<div class="col-sm-4 space-2 text-center">
+<% unless @biz.google.blank? %>
+<a href="<%= @biz.google %>" target="_blank">
+  <button class="ma-btn ma-btn--small ma-btn--google">
+                    <div class="ma-btn__content">
+                        <div class="ma-btn__content__icon-container">
+                            <svg aria-hidden="true" role="presentation" style="display: block; height: 18px; width: 18px;" viewBox="0 0 18 18">
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M9 3.48c1.69 0 2.83.73 3.48 1.34l2.54-2.48C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.96l2.91 2.26C4.6 5.05 6.62 3.48 9 3.48z" fill="#EA4335"></path>
+                                <path d="M17.64 9.2c0-.74-.06-1.28-.19-1.84H9v3.34h4.96c-.1.83-.64 2.08-1.84 2.92l2.84 2.2c1.7-1.57 2.68-3.88 2.68-6.62z" fill="#4285F4"></path>
+                                <path d="M3.88 10.78A5.54 5.54 0 0 1 3.58 9c0-.62.11-1.22.29-1.78L.96 4.96A9.008 9.008 0 0 0 0 9c0 1.45.35 2.82.96 4.04l2.92-2.26z" fill="#FBBC05"></path>
+                                <path d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.84-2.2c-.76.53-1.78.9-3.12.9-2.38 0-4.4-1.57-5.12-3.74L.97 13.04C2.45 15.98 5.48 18 9 18z" fill="#34A853"></path>
+                                <path d="M0 0h18v18H0V0z"></path>
+                            </g></svg>
+                        </div>
+                        <div class="space-left-2">
+                            <span>Leave a review on google</span>
+                        </div>
+                    </div>
+  </button>
+  </a>
+  <% end %>
+</div>
+<div class="col-sm-4 space-2 text-center">
+<% unless @biz.yelp.blank? %>
+  <a href="<%= @biz.yelp %>" target="_blank">
+  <button class="ma-btn ma-btn--small ma-btn--yelp">
+                    <div class="ma-btn__content">
+                        <div class="ma-btn__content__icon-container">
+                            <i class="fa fa-yelp" aria-hidden="true"></i>
+                        </div>
+                        <div class="space-left-2">
+                            <span>Leave them a review on yelp</span>
+                        </div>
+                    </div>
+  </button>
+  </a>
+  <% end %>
+</div>
+</div>
+ 
+<div class="row">
+<div class="col-sm-6 space-2 text-center">
+<% unless @biz.instagram.blank? %>
+    <a href="<%= @biz.instagram %>" target="_blank">
+  <button class="ma-btn ma-btn--small ma-btn--instagram">
+                    <div class="ma-btn__content">
+                        <div class="ma-btn__content__icon-container">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+                        <div class="space-left-2">
+                            <span>Follow them on instagram</span>
+                        </div>
+                    </div>
+  </button>
+  </a>
+  <% end %>
+</div>
+
+
+<div class="col-sm-6 space-2 text-center">
+<% unless @biz.twitter.blank? %>
+      <a href="<%= @biz.twitter %>" target="_blank">
+  <button class="ma-btn ma-btn--small ma-btn--twitter">
+                    <div class="ma-btn__content">
+                        <div class="ma-btn__content__icon-container">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                        <div class="space-left-2">
+                            <span>Follow them on twitter</span>
+                        </div>
+                    </div>
+  </button>
+  </a>
+  <% end %>
+</div>
+</div>
+
+<div class="space-top-5 ma-p ma-p--small">
+<% if user_signed_in? %>
+<%= link_to 'Edit', edit_biz_path(@biz) %> | <%= link_to "Delete", biz_path, method: :delete, data: {confirm: "Are You Sure?"} %> | 
+<% end %>
+<%= link_to 'Go Back', root_path %>
+</div>
+
+
+
+
+</div>
+

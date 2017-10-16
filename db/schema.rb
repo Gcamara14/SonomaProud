@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171014232550) do
+ActiveRecord::Schema.define(version: 20171016203339) do
+
+  create_table "bizs", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "location"
+    t.string "phone"
+    t.string "facebook"
+    t.string "google"
+    t.string "yelp"
+    t.string "twitter"
+    t.string "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "instagram"
+    t.string "slug"
+    t.index ["slug"], name: "index_bizs_on_slug", unique: true
+  end
 
   create_table "businesses", force: :cascade do |t|
     t.string "name"
