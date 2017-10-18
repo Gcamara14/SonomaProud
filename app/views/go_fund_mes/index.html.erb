@@ -1,6 +1,7 @@
-<h1 class="space-top-3 container">These Businesses are waiting to be approved!</h1>
+<h1 class="space-top-3 container">NorCal Fire Direct Relief Info</h1>
+<h2 class="container"><small>Go-Fund-Me's for people in our community</small></h2>
 
-<p class=" container space-7 space-top-5 ma-p ma-p--default alert ma-input--notice"> <strong>The following businesses will need to be reviewed before being submitted to the main page... Thanks for your patience!</strong></p>
+<p class="container ma-p ma-p--default">This page is meant to support the people in our community who have lost a home or are in need of assistance due to the fire. If you can please donate to one of these go fund me pages. If you would like to see a google spreadsheet version of this <a href="https://docs.google.com/spreadsheets/d/1l3Q_YJ_JOd8LMgKn222_pViY_2evVr-iTjq6uxuzu9c/edit#gid=0" target="blank" rel="noopener">please click here.</a></p>
 
 <div class="container">
 <div class="row display-flex">
@@ -8,16 +9,15 @@
     
     <% go_fund_me.each  do |fund| %>
       <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="inner-col well space-3 space-top-3">
+        <div class="inner-col space-3 space-top-3">
         <%= link_to fund, class: "link-reset" do %>
             <h4><strong><%= fund.campaign %></strong><small> <i class="fa fa-check-circle verified-hex" aria-hidden="true"></i></small></h4> <% end %>
             <h4><%= fund.beneficiary %></h4>
             <h6><%= fund.created_at.strftime('%b %d, %Y') %></h6>
-            <%= fund.embed.html_safe %>   
-            <!-- NEED TO ADD SAME USER ONLY REMOVE FEATURE -->
-            <% if user_signed_in?%> 
-            <p><%= link_to 'Show More Options', fund %> </p>
-            <% end %>                     
+                        <% if user_signed_in? && current_user == fund.user%> 
+            <p class="space-top-3 space-3"><%= link_to 'Show More Options', fund %> </p>
+            <% end %>   
+            <%= fund.embed.html_safe %>                                 
         </div>
       </div>
     <% end %>

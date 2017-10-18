@@ -1,6 +1,7 @@
 class GoFundMesController < ApplicationController
   before_action :set_go_fund_me, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:new, :edit]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
   # GET /go_fund_mes
   # GET /go_fund_mes.json
   def index
@@ -14,7 +15,7 @@ class GoFundMesController < ApplicationController
 
   # GET /go_fund_mes/new
   def new
-    @go_fund_me = GoFundMe.new
+    @go_fund_me = current_user.go_fund_mes.build
   end
 
   # GET /go_fund_mes/1/edit
@@ -24,7 +25,7 @@ class GoFundMesController < ApplicationController
   # POST /go_fund_mes
   # POST /go_fund_mes.json
   def create
-    @go_fund_me = GoFundMe.new(go_fund_me_params)
+    @go_fund_me = current_user.go_fund_mes.build(go_fund_me_params)
 
     respond_to do |format|
       if @go_fund_me.save
@@ -64,11 +65,19 @@ class GoFundMesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_go_fund_me
-      @go_fund_me = GoFundMe.find(params[:id])
+      @go_fund_me = GoFundMe.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def go_fund_me_params
-      params.require(:go_fund_me).permit(:campaign, :beneficiary, :embed, :user_id)
+      params.require(:go_fund_me).permit(:campaign, :beneficiary, :embed, :user_id, :slug)
     end
+
+    def require_same_user
+      if @go_fund_me.user != current_user
+        flash[:alert] = "That is not your post... you can't edit that!"
+        redirect_to root_path
+      end
+    end
+
 end

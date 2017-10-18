@@ -82,11 +82,15 @@
                 <ul class="ma-nav-list">
                 <!-- SHOW THIS IF LOGGED IN -->
                 <% if user_signed_in? %>
-                    <li class="ma-nav-list__item">
+<!--                     <li class="ma-nav-list__item">
                     <%= link_to (new_business_path) do %>
-                        <button class="ma-nav-list__item__btn">New Post</button>
+                        <button class="ma-nav-list__item__btn">New Business Post</button>
                     <% end %>
-                    </li>
+                    </li> -->
+                   <%= link_to (new_go_fund_me_path) do %>
+                        <button class="ma-nav-list__item__btn">New Go-Fund-Me Post</button>
+                    <% end %>
+                    </li>                    
                     <li class="ma-nav-list__item">
                     <%= link_to destroy_user_session_path, method: :delete do %>
                         <button class="ma-nav-list__item__btn">Log Out</button>
@@ -114,13 +118,15 @@
             </div><span class="space-right-1 space-left-1">·</span>
             <div class="ma-subnav__item">
                 <div class="content">
-                    <%= link_to "Resources", welcome_resources_path %>
+                    <%= link_to "Go-Fund-Me's", go_fund_mes_path %>                    
                 </div>
             </div>
             <span class="space-right-1 space-left-1">·</span> 
             <div class="ma-subnav__item">
                 <div class="content">
-                    <%= link_to "Submit a Biz", new_biz_path %>
+                <% if !user_signed_in? %>
+                    <%= link_to "Submit", new_biz_path %>
+                    <% end %>
                 </div>
             </div>        
         </nav>
@@ -138,11 +144,16 @@
                     <%= link_to "How", welcome_how_path, class: "link-reset" %>
                 </div>
             </div>
-            <div class="ma-subnav__item">
-                <div class="content">                    
-                    <%= link_to "Contact Us", welcome_feedback_path, class: "link-reset" %>
+            <div class="ma-subnav__item space-right-4">
+                <div class="content">                                        
+                    <%= link_to "Resources", welcome_resources_path, class: "link-reset" %>
                 </div>
             </div>
+            <div class="ma-subnav__item">
+                <div class="content">                    
+                    <%= link_to "Contact Us", welcome_feedback_path, class: "link-reset" %>                    
+                </div>
+            </div>            
         </nav>
     </div>
 
