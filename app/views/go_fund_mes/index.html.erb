@@ -17,7 +17,9 @@
                         <% if user_signed_in? && current_user == fund.user%> 
             <p class="space-top-3 space-3"><%= link_to 'Show More Options', fund %> </p>
             <% end %>   
-            <%= fund.embed.html_safe %>                                 
+             <div class="holds-the-iframe"><%= fund.embed.html_safe %></div>
+
+                                             
         </div>
       </div>
     <% end %>

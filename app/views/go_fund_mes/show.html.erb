@@ -9,7 +9,7 @@
 
 <div class="container text-center">
 <p class="screen-reader-only">Dear screen reader user! This next item is an embedded iframe. The iframe is a go-fund-me page for <%= @go_fund_me.beneficiary %> </p>
-  <%= @go_fund_me.embed.html_safe %>
+  <div class="holds-the-iframe"><%= (@go_fund_me.embed.html_safe) %></div>
 </div>
 
 <div class="space-top-5 ma-p ma-p--small">
