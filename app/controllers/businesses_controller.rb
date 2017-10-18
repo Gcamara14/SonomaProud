@@ -7,7 +7,7 @@ class BusinessesController < ApplicationController
   # GET /businesses
   # GET /businesses.json
   def index
-    @businesses = Business.all
+    @businesses = Business.all.order("created_at DESC")
   end
 
   # GET /businesses/1
