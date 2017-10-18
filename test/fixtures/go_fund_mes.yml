@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  campaign: MyString
+  beneficiary: MyString
+  embed: MyText
+  user_id: 1
+
+two:
+  campaign: MyString
+  beneficiary: MyString
+  embed: MyText
+  user_id: 1

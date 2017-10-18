@@ -1,0 +1,22 @@
+<% title "Donate to the #{@go_fund_me.campaign} go fund me campaign. Please help #{@go_fund_me.beneficiary} reach the goal!"%>
+<% meta_description "#{@go_fund_me.campaign} and #{@go_fund_me.beneficiary} can use your help reaching the gofundme goal. Please support them and your fellow sonoma county family members! #sonomaproud! " %> 
+
+<div class="space-3 container text-center">
+<h1><strong><%= @go_fund_me.campaign %></strong> <small><i class="fa fa-check-circle verified-hex" aria-hidden="true"></i></small>
+</h1>
+
+<h2><strong><%= @go_fund_me.beneficiary %></strong></h2>
+
+<div class="container text-center">
+<p class="screen-reader-only">Dear screen reader user! This next item is an embedded iframe. The iframe is a go-fund-me page for <%= @go_fund_me.beneficiary %> </p>
+  <%= @go_fund_me.embed.html_safe %>
+</div>
+
+<div class="space-top-5 ma-p ma-p--small">
+<% if user_signed_in? %>
+<%= link_to 'Edit', edit_go_fund_me_path(@go_fund_me) %> |
+<%= link_to 'Back', go_fund_mes_path %>
+<%= link_to "Delete", go_fund_me_path, method: :delete, data: {confirm: "Are You Sure?"} %>
+<% end %>
+</div>
+</div>

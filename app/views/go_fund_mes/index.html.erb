@@ -1,0 +1,26 @@
+<h1 class="space-top-3 container">These Businesses are waiting to be approved!</h1>
+
+<p class=" container space-7 space-top-5 ma-p ma-p--default alert ma-input--notice"> <strong>The following businesses will need to be reviewed before being submitted to the main page... Thanks for your patience!</strong></p>
+
+<div class="container">
+<div class="row display-flex">
+  <% @go_fund_mes.each_slice(3)  do |go_fund_me| %>
+    
+    <% go_fund_me.each  do |fund| %>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="inner-col well space-3 space-top-3">
+        <%= link_to fund, class: "link-reset" do %>
+            <h4><strong><%= fund.campaign %></strong><small> <i class="fa fa-check-circle verified-hex" aria-hidden="true"></i></small></h4> <% end %>
+            <h4><%= fund.beneficiary %></h4>
+            <h6><%= fund.created_at.strftime('%b %d, %Y') %></h6>
+            <%= fund.embed.html_safe %>   
+            <!-- NEED TO ADD SAME USER ONLY REMOVE FEATURE -->
+            <% if user_signed_in?%> 
+            <p><%= link_to 'Show More Options', fund %> </p>
+            <% end %>                     
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>

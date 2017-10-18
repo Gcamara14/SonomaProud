@@ -1,0 +1,48 @@
+<%= form_with(model: go_fund_me, local: true) do |form| %>
+  <% if go_fund_me.errors.any? %>
+    <div id="error_explanation" class="alert container">
+      <h2><%= pluralize(go_fund_me.errors.count, "error") %> prohibited this go_fund_me from being saved:</h2>
+
+      <ul>
+      <% go_fund_me.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<section class="forms-section container">
+  <h2>Copy the information found on the original go-fund-me post</h2>
+  <div class="row">
+      <div class="col-xs-12 space-5">
+          <div class="ma-box">
+              <div class="ma-box__title">
+                  Please try your best not to leave any info out. (The embed code is the most important one!)
+              </div>
+              <div class="ma-box__content">
+                  <form class="ma-form ma-form--basic">  
+                    <div class="field">
+                      <%= form.label :campaign, "Enter the campaign name" %>
+                      <%= form.text_field :campaign, id: :go_fund_me_campaign, placeholder: "Campaign Name:", class: "ma-input ma-input--default" %>
+                    </div>
+
+                    <div class="field">
+                      <%= form.label :beneficiary, "Enter the beneficiary name" %>
+                      <%= form.text_field :beneficiary, id: :go_fund_me_beneficiary, placeholder: "Beneficiary Name:", class: "ma-input ma-input--default" %>
+                    </div>
+
+                    <div class="field">
+                      <%= form.label :embed %>
+                      <%= form.text_area :embed, id: :go_fund_me_embed, placeholder: "gofundme.com embed code", class: "ma-input ma-input--default ma-textarea", cols: "60", rows: "6" %>
+                    </div>
+                    <div class="actions space-5 space-top-5">
+                      <%= form.submit class: 'ma-btn ma-btn--default ma-btn--primary' %>
+                    </div>
+                  <% end %>
+                  </form>
+              </div>
+              <div class="ma-box__footer"><%= link_to 'Back', go_fund_mes_path %></div>
+          </div>
+      </div>
+  </div>
+</section>

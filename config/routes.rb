@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :go_fund_mes, :path => 'go-fund-me'
   resources :bizs, :path => 'submit-a-biz'
 
   devise_for :users

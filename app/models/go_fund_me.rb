@@ -1,0 +1,2 @@
+class GoFundMe < ApplicationRecord
+end
