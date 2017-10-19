@@ -5,7 +5,7 @@ class GoFundMesController < ApplicationController
   # GET /go_fund_mes
   # GET /go_fund_mes.json
   def index
-    @go_fund_mes = GoFundMe.all.order("created_at DESC")
+    @go_fund_mes = GoFundMe.paginate(page: params[:page], per_page: 15).order('created_at DESC')
   end
 
   # GET /go_fund_mes/1

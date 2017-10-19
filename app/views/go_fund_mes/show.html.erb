@@ -15,7 +15,7 @@
 <div class="space-top-5 ma-p ma-p--small">
 <% if user_signed_in? && current_user == @go_fund_me.user %>
 <%= link_to 'Edit', edit_go_fund_me_path(@go_fund_me) %> |
-<%= link_to 'Back', go_fund_mes_path %> |
+<%= link_to 'Back', go_fund_mes_path, :"data-turbolinks" => false %> |
 <%= link_to "Delete", go_fund_me_path, method: :delete, data: {confirm: "Are You Sure?"} %>
 <% end %>
 </div>

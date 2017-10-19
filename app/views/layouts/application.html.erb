@@ -36,7 +36,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script src="https://use.fontawesome.com/99e7a6e2c6.js"></script>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: true %>
   </head>
 
   <body class="mainApp margin-reset">
@@ -116,16 +116,17 @@
                     <%= link_to "Businesses", businesses_path %>
                 </div>
             </div><span class="space-right-1 space-left-1">·</span>
-            <!-- <div class="ma-subnav__item">
+            
+            <div class="ma-subnav__item">
                 <div class="content">
-                    <%= link_to "Go-Fund-Me's", go_fund_mes_path %>                    
+                    <%= link_to "Go-Fund-Me's", go_fund_mes_path, :"data-turbolinks" => false %>                    
                 </div>
             </div>
-            <span class="space-right-1 space-left-1">·</span>  -->
+            <span class="space-right-1 space-left-1">·</span>
             <div class="ma-subnav__item">
                 <div class="content">
                 <% if !user_signed_in? %>
-                    <%= link_to "Submit a Biz", new_biz_path %>
+                    <%= link_to "Submit", new_biz_path %>
                     <% end %>
                 </div>
             </div>        

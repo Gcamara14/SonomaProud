@@ -4,4 +4,6 @@ class GoFundMe < ApplicationRecord
 	validates :campaign, :beneficiary, :embed, presence: true
 
 	belongs_to :user
+	self.per_page = 10
+
 end

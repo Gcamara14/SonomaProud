@@ -1145,7 +1145,7 @@ body.mainApp {
   -webkit-font-smoothing: antialiased; }
   .ma-p--small {
     font-size: 15px; }
-  .ma-p--default {
+  .ma-p--default, .pagination {
     font-size: 19px; }
   .ma-p--large {
     font-size: 22px; }
@@ -1564,10 +1564,16 @@ svg{
 }
 
 .holds-the-iframe {
-  background:url("https://s3-us-west-1.amazonaws.com/recipe-app-gio/recipes/images/000/000/008/medium/ErrorLoading-white.png") center center no-repeat;
-  background-size: contain;
+  background:url("https://s3-us-west-1.amazonaws.com/recipe-app-gio/recipes/images/000/000/008/medium/heartload.gif") center center no-repeat;
+  background-size: auto;
  }
 
  .full-width {
  	width: 100% !important;
  }
+
+ .pagination {
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+}
