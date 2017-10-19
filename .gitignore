@@ -20,4 +20,10 @@
 /node_modules
 /yarn-error.log
 
+
+/vendor
+
+# Ignore sublime workspaces/projects
+/*.sublime*
+
 .byebug_history
