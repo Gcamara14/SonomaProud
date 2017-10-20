@@ -16,8 +16,7 @@
 //= require jquery
 //= require jquery_ujs
 
-
-
+$(document).on('turbolinks:load', function () {
 // Dropdown Menu
 var dropdown = document.querySelectorAll('.dropdown');
 var dropdownArray = Array.prototype.slice.call(dropdown,0);
@@ -47,4 +46,7 @@ dropdownArray.forEach(function(el){
 Element.prototype.hasClass = function(className) {
     return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
 };
+
+
+})
 
