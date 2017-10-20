@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   get 'welcome/responders'
 
+  get 'welcome/owners'
 
   root to: 'businesses#index'
 

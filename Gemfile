@@ -39,6 +39,7 @@ gem 'aws-sdk', '~> 2.3'
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise'
 gem 'will_paginate', '~> 3.1.0'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 
 

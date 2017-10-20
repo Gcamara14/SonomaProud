@@ -137,22 +137,31 @@
         <nav class="container">
             <div class="ma-subnav__item space-right-4">
                 <div class="content">
-                    <%= link_to "Why", welcome_why_path, class: "link-reset" %>
+                    <%= link_to "Owners", welcome_owners_path, class: "link-reset" %>
                 </div>
             </div>
             <div class="ma-subnav__item space-right-4">
                 <div class="content">
-                    <%= link_to "How", welcome_how_path, class: "link-reset" %>
+                    <%= link_to "Responders", welcome_responders_path, class: "link-reset" %>
                 </div>
             </div>
-            <div class="ma-subnav__item space-right-4">
+<!--             <div class="ma-subnav__item space-right-4">
                 <div class="content">                                        
-                    <%= link_to "Resources", welcome_resources_path, class: "link-reset" %>
+                    <a href="">About</a>
                 </div>
-            </div>
-            <div class="ma-subnav__item">
-                <div class="content">                    
-                    <%= link_to "Contact Us", welcome_feedback_path, class: "link-reset" %>                    
+            </div> -->
+            <div class="ma-subnav__item" data-turbolinks="false">
+                <div class="content" data-turbolinks="false">                                        
+                    <ul class="normal-ul" data-turbolinks="false">
+    <li class="dropdown" data-turbolinks="false">
+      <a href="#" data-turbolinks="false" class="link-reset" data-toggle="dropdown">Information <i class="icon-arrow"></i></a>
+      <ul class="dropdown-menu" data-turbolinks="false">
+        <li><%= link_to "Why", welcome_why_path, class: "link-reset" %></li>
+        <li><%= link_to "How", welcome_how_path, class: "link-reset" %></li>
+        <li><%= link_to "Resources", welcome_resources_path, class: "link-reset" %></li>
+        <li><%= link_to "Contact Us", welcome_feedback_path, class: "link-reset" %></li>
+      </ul>
+    </li></ul>
                 </div>
             </div>            
         </nav>

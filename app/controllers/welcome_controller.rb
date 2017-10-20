@@ -22,4 +22,7 @@ class WelcomeController < ApplicationController
 
   def responders
   end
+
+  def owners
+  end
 end
