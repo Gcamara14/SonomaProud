@@ -847,7 +847,7 @@ body.mainApp {
 
 .section-banner-background_img {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.55)), to(rgba(0, 0, 0, 0.55))), rgba(0, 0, 0, 0.55) url(http://www.pbhs-sites.com/wp-content/themes/sfdentalgroup/_photos/photo2.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0, 0, 0, 0.55) url(http://www.pbhs-sites.com/wp-content/themes/sfdentalgroup/_photos/photo2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0, 0, 0, 0.55) url(https://s3-us-west-1.amazonaws.com/recipe-app-gio/recipes/images/000/000/008/medium/First-Responders.jpg);
   background-size: cover;
   color: #fff; }
 
@@ -1576,4 +1576,27 @@ svg{
     width: 100%;
     text-align: center;
     border-radius: 4px;
+}
+
+.padding1{
+	padding: 25px 0;
+}
+
+.padding2{
+	padding: 50px 0;
+}
+
+
+.padding3{
+	padding: 75px 0;
+}
+
+
+.padding4{
+	padding: 100px 0;
+}
+
+/*Mobile experience*/
+.touch{
+	  -webkit-overflow-scrolling: touch;
 }

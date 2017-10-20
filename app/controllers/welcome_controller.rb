@@ -19,4 +19,7 @@ class WelcomeController < ApplicationController
 
   def how
   end
+
+  def responders
+  end
 end

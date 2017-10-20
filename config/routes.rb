@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'welcome/how'
   get 'welcome/why'
 
+  get 'welcome/responders'
+
 
   root to: 'businesses#index'
 
