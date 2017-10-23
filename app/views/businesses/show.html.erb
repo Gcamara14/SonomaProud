@@ -45,14 +45,15 @@
                 </a>
             <% end %>
           </div>
-<% if user_signed_in? %>
-<p class="well"><strong>= = = CUSTOM HTML Below = = = <small>This message is only visible to logged in users</small></p>
-<% end %>
+<% unless @business.html.blank? %>
+  <% if user_signed_in? %>
+  <p class="well"><strong>= = = CUSTOM HTML Below = = = <small>This message is only visible to logged in users</small></p>
+  <% end %>
 
-<div class="custom_html space-8 custom-<%= @business.name %>">
-<%= @business.html.html_safe  %>
+  <div class="custom_html space-8 custom-<%= @business.name %>">
+  <%= @business.html.html_safe  %>
 </div>
-
+<% end %>
 
 <h2 class="text-center space-5 space-top-5">Find them online!</h2>
 
@@ -152,7 +153,7 @@
 </div>
 
 <div class="space-top-5 ma-p ma-p--small">
-<% if user_signed_in? && @business.user == current_user %>
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_business_path(@business) %> | <%= link_to "Delete", business_path, method: :delete, data: {confirm: "Are You Sure?"} %> | 
 <% end %>
 <%= link_to 'Go Back', businesses_path %>
