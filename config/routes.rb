@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'welcome/feedback'
   get 'welcome/how'
   get 'welcome/why'
+  get 'welcome/credits'
 
   get 'welcome/responders'
 

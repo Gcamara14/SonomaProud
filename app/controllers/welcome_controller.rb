@@ -25,4 +25,8 @@ class WelcomeController < ApplicationController
 
   def owners
   end
+
+  def credits
+    
+  end
 end
