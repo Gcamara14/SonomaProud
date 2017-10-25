@@ -11,7 +11,16 @@
       <div class="col-sm-6 col-md-4 col-lg-3">
         <div class="inner-col space-3 space-top-3">
           <img src="<%= business.image %>" class="img-responsive" alt="image of <%=business.name %>">
-          <h2><strong><%= business.name %></strong><small> <i class="fa fa-check-circle verified-hex" aria-hidden="true"></i></small></h2>
+          <h2>
+            <strong><%= business.name %></strong>
+            <small>
+              <% if business.published %>
+                <i class="fa fa-check-circle verified-hex" aria-hidden="true"></i>
+              <% else %>
+                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+              <% end %>
+            </small>
+          </h2>
           <h6><%= business.created_at.strftime('%b %d, %Y') %></h6>
           <p class="ma-p ma-p--small"> <%= raw(business.description).truncate(358) %> <%= link_to "read more", business %></p>
           <div class="social-media social-links social-media social-links ma-p ma-p--small space-4 space-top-4">

@@ -124,11 +124,7 @@
             </div>
             <span class="space-right-1 space-left-1">·</span>
             <div class="ma-subnav__item">
-                <div class="content">
-                <% if !user_signed_in? %>
-                    <%= link_to "Submit", new_biz_path %>
-                    <% end %>
-                </div>
+                <div class="content"><%= link_to "Submit", new_business_path %></div>
             </div>        
         </nav>
     </div>

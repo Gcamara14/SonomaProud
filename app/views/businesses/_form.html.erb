@@ -77,10 +77,18 @@
                                   <%= form.file_field :image, id: :business_image, style: "width: 100%;", class: "ma-btn ma-btn--small ma-btn--secondary-without-bg" %>
                                 </div>
 
-                                <div class="field form-group">
-                                  <%= form.label :html, "Custom HTML" %>
-                                  <%= form.text_area :html, id: :business_html, class: "ma-input ma-input--default ma-textarea", cols: "60", rows: "6", id: "input11", placeholder: "Input custom HTML such as more content using a <h2> tag and <p> tags. Or add a google map, etc. Or leave this blank", type: "text"%>
-                                </div>
+                                <% if user_signed_in? %>
+                                  <div class="field form-group">
+                                    <%= form.label :html, "Custom HTML" %>
+                                    <%= form.text_area :html, id: :business_html, class: "ma-input ma-input--default ma-textarea", cols: "60", rows: "6", id: "input11", placeholder: "Input custom HTML such as more content using a <h2> tag and <p> tags. Or add a google map, etc. Or leave this blank", type: "text"%>
+                                  </div>
+
+                                  <div class="field form-group">
+                                    <%= form.label :published, "Public" %>
+                                    <%= form.radio_button :published, true, :checked => @business.published %> Yes
+                                    <%= form.radio_button :published, false, :checked => !@business.published %> No
+                                  </div>
+                                  <% end %>
 
                                  <div class="actions">
                                     <%= form.submit class: 'ma-btn ma-btn--default ma-btn--primary' %>

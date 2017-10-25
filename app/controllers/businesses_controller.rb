@@ -1,13 +1,17 @@
 class BusinessesController < ApplicationController
   before_action :set_business, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit]
-  before_action :require_same_user, only: [:edit]
-
+  before_action :authenticate_user!, only: [:edit]
 
   # GET /businesses
   # GET /businesses.json
   def index
-    @businesses = Business.all.order("created_at DESC")
+    if user_signed_in?
+      # all businesses shown to logged in users
+      @businesses = Business.all.order("created_at DESC")
+    else
+      # only published businesses shown 
+      @businesses = Business.published.order("created_at DESC")
+    end
   end
 
   # GET /businesses/1
@@ -17,7 +21,11 @@ class BusinessesController < ApplicationController
 
   # GET /businesses/new
   def new
-    @business = current_user.businesses.build
+    if user_signed_in?
+      @business = current_user.businesses.build
+    else
+      @business = Business.new
+    end
   end
 
   # GET /businesses/1/edit
@@ -27,7 +35,11 @@ class BusinessesController < ApplicationController
   # POST /businesses
   # POST /businesses.json
   def create
-    @business = current_user.businesses.build(business_params)
+    if user_signed_in?
+      @business = current_user.businesses.build(business_params)
+    else
+      @business = Business.new(business_params)
+    end
 
     respond_to do |format|
       if @business.save
@@ -72,14 +84,6 @@ class BusinessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def business_params
-      params.require(:business).permit(:name, :description, :location, :phone, :facebook, :google, :yelp, :instagram, :twitter, :website, :html, :user_id, :image, :slug)
+      params.require(:business).permit(:name, :description, :location, :phone, :facebook, :google, :yelp, :instagram, :twitter, :website, :html, :user_id, :image, :slug, :published)
     end
-
-      def require_same_user
-    if current_user != @business.user
-      flash[:alert] = "That is not your post... you can't edit that!"
-      redirect_to root_path
-    end
-  end
-
 end
