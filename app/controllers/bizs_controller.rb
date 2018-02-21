@@ -15,8 +15,12 @@ class BizsController < ApplicationController
 
   # GET /bizs/new
   def new
-    redirect_to root_path
-    @biz = Biz.new
+        if user_signed_in?
+      @biz = Biz.new
+    else
+      redirect_to root_path
+    end
+    
   end
 
   # GET /bizs/1/edit

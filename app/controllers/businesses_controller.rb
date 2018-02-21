@@ -25,7 +25,7 @@ class BusinessesController < ApplicationController
     if user_signed_in?
       @business = current_user.businesses.build
     else
-      @business = Business.new
+      redirect_to root_path
     end
   end
 
