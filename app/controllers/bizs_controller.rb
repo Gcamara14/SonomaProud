@@ -15,6 +15,7 @@ class BizsController < ApplicationController
 
   # GET /bizs/new
   def new
+    redirect_to root_path
     @biz = Biz.new
   end
 
