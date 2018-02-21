@@ -34,10 +34,14 @@ gem 'jbuilder', '~> 2.5'
 
 # Added gems 10/13/2017
 
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.2.1"
+
+# Updated 2/18/2018
+
 gem 'aws-sdk', '~> 2.3'
 gem 'friendly_id', '~> 5.1.0'
-gem 'devise'
+# gem 'devise',               '~> 4.3.0'
+gem 'devise', git: 'https://github.com/plataformatec/devise' #, ref: '88e9a85'
 gem 'will_paginate', '~> 3.1.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
