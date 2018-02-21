@@ -21,7 +21,6 @@ class BusinessesController < ApplicationController
 
   # GET /businesses/new
   def new
-    redirect_to root_path
     if user_signed_in?
       @business = current_user.businesses.build
     else
