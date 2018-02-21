@@ -11,6 +11,8 @@
   gtag('config', 'UA-78427388-6');
 </script>
 
+
+
 <% if :meta_description.present? %>
     <meta content="<%= meta_description %>" name="description"/>
   <% else %>
@@ -37,6 +39,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script src="https://use.fontawesome.com/99e7a6e2c6.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: true %>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
 
   <body class="mainApp margin-reset">
