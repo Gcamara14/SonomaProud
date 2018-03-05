@@ -21,7 +21,11 @@ Why am I making this?
 - [x] Connect the website to aws S3 servers for image uploading  
 - [x] add 404 pages  
 - [x] Push to heroku  
-- [x] Find other webmasters and set them up as users for data entry process.  
+- [x] Find other webmasters and set them up as users for data entry process.
+- Updated March 4th, 2018
+- [ ] Add a feature where people can find local opportunities to volunteer and give back to a local cause.
+- [ ] Add a feature where people can blog/write about their experiences and share advice / tips.
+- [ ] Other community building features to be determind
 
 
 ## Features
